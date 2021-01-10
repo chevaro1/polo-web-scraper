@@ -12,8 +12,9 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 def deleteDup():
-    
-    sql = "DELETE FROM products WHERE id NOT IN (SELECT MIN(id) as id FROM products GROUP BY date,img,name,brand,category,product,gender,colour,price,website)"
+
+    #sql = "DELETE FROM products WHERE id NOT IN (SELECT MIN(id) as id FROM products GROUP BY date,img,name,brand,category,product,gender,colour,price,website)"
+    sql = "DELETE FROM products WHERE id NOT IN (SELECT MIN(id) as id FROM (SELECT * FROM products) AS products GROUP BY date,img,name,brand,category,product,gender,colour,price,website)"
 
     mycursor.execute(sql)
 
