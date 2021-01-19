@@ -14,25 +14,32 @@ from performance_polo import PerformancePolo
 from willoughby_park import WilloughbyPark
 from krono_polo import KronoPolo
 from truncate_db import truncate
+from get_active import get_active
 
 print("Application running")
 truncate()
 print("database cleared")
 
-SatsPolo()
-RJPolo()
-TallyHo()
-Casablanca()
-poloSplice()
-PortoPolo()
-LaMartina()
-WorldWideTack()
-thePoloShop()
-roxtons()
-onaPolo()
+res = get_active()
+print(res)
+for x in res:
+    run = globals()[x]
+    run()
+
+#SatsPolo()
+#RJPolo()
+#TallyHo()
+#Casablanca()
+#poloSplice()
+#PortoPolo()
+#LaMartina()
+#WorldWideTack()
+#thePoloShop()
+#roxtons()
+#onaPolo()
 #PerformancePolo() THIS DOES NOT WORK, KEEP COMMENTED OUT
-WilloughbyPark()
-KronoPolo()
+#WilloughbyPark()
+#KronoPolo()
 
 
 print("deleting duplicates")
@@ -44,4 +51,3 @@ print("application complete")
 # to do list
 # performance polo : https://www.performance-polo.com/shop DOESNT WORK
 # hurlingham polo : www.hurlinghampolo1875.com NOT WORTH IT
-

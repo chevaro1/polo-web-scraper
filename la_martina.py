@@ -17,15 +17,15 @@ def getLaMartinaData(soup):
         priceList = []
         imgList = []
         linkList = []
-        
+
         #PRICE
         for pricetag in soup.find_all("div", {"class": "ProductItem__PriceList ProductItem__PriceList--showOnHover Heading"}):
             #print ("price in tag = " + repr(pricetag.text))
             price = pricetag.text
             priceList.append(price)
-            
 
-        
+
+
         #NAME
         for nametag in soup.find_all("h2", {"class": "ProductItem__Title Heading"}):
             #for titletag in nametag.find_all("a"):
@@ -35,7 +35,7 @@ def getLaMartinaData(soup):
             link = nametag.find('a')
             linkList.append("https://tech.lamartina.com/" + link.get('href'))
 
-        #IMAGE            
+        #IMAGE
         for phototag in soup.find_all("div", {"class": "AspectRatio AspectRatio--square"}):
             #print(phototag)
             #for pictag in phototag.find_all("img", {"class": "ProductItem__Image"}):
@@ -49,7 +49,7 @@ def getLaMartinaData(soup):
 
         while x < len(nameList):
             newRow = []
-            
+
             try:
                 newRow.append(imgList[x])
                 newRow.append(linkList[x])
@@ -63,12 +63,12 @@ def getLaMartinaData(soup):
                 newRow.append(getPrice(priceList[x]))
 
                 #print(newRow)
-            
+
                 insertdb(newRow[0], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[7], newRow[8], "La Martina")
             except IndexError:
                     print("product incomplete")
             x = x + 1
-                
+
 
 
 
@@ -85,7 +85,7 @@ def LaMartina():
 
 
     x = 0
-    
+
     for i in urlList:
         x += 1
         HTML = getHTML(i)
@@ -94,9 +94,3 @@ def LaMartina():
         getLaMartinaData(soup)
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
           + "PAGE IS FINISHED " + str(x) + "\n" + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-
-
-
-
-
-LaMartina()
