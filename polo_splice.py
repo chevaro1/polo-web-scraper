@@ -1,4 +1,6 @@
 import requests
+
+The following SQL statement selects all customers from the "Customers" table, sorted DESCENDING by the "Country" column:
 from bs4 import BeautifulSoup
 from config import insertdb
 from get_html import getHTML, getSoup
