@@ -18,9 +18,9 @@ def getPoloSpliceData(soup):
             newRow = []
             #print("\n")
             for imgtag in litag.find_all("img"):
-                #print (imgtag["src"])
+                print (imgtag["src"])
                 newRow.append(imgtag["src"])
-            for productName in litag.find_all("h4", {"class": "card-title"}):
+            for productName in litag.find_all("h3", {"class": "card-title"}):
                 #print (productName.text)
                 name = productName.text
                 newRow.append(name)
@@ -30,15 +30,15 @@ def getPoloSpliceData(soup):
                 newRow.append(result[2])
                 newRow.append(result[3])
                 newRow.append(result[4])
-                #print('\n' + 'name = ' + name)
+                print('\n' + 'name = ' + name)
                 link = productName.find('a')
-                newRow.append(link.get('href'))             
+                newRow.append(link.get('href'))
             for productPrice in litag.find_all("span", {"class" : "price price--withTax"}):
                 #print(productPrice.text)
                 price = productPrice.text
                 if not price:
                     price = "n/a"
-                #print('\n' + 'price = ' + price)
+                print('\n' + 'price = ' + price)
                 newRow.append(getPrice(price))
 
             try:
@@ -48,7 +48,7 @@ def getPoloSpliceData(soup):
 
 
 
-    
+
 
 
 
@@ -90,7 +90,7 @@ def poloSplice():
 
 
     x = 0
-    
+
     for i in urlList:
         x += 1
         HTML = getHTML(i)
