@@ -48,7 +48,7 @@ def getPoloSpliceData(soup):
                 insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], "polo splice")
             except IndexError:
                     print("product incomplete")
-                    addError("polo splice")
+                    addError("polo_splice")
 
 
 

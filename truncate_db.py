@@ -13,7 +13,7 @@ mycursor = mydb.cursor()
 
 def truncate():
 
-    sql = "TRUNCATE polo.products"
+    sql = "TRUNCATE william.products"
 
     mycursor.execute(sql)
 
