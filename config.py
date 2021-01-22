@@ -5,9 +5,9 @@ from errors import addError
 
 mydb = mysql.connector.connect(
     host="localhost",
-    user="global",
-    password="global2020",
-    database="polo"
+    user="william",
+    password="VUjH2tGs7nL6xy7x",
+    database="william"
     )
 
 today = date.today()
