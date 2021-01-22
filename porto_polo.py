@@ -4,6 +4,7 @@ from config import insertdb
 from get_html import getHTML, getSoup
 from product_details import gettype
 from get_price import getPrice
+from errors import addError
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #                           PORTO POLO WEBSITE
@@ -15,7 +16,7 @@ def getPortoPoloData(soup):
         priceList = []
         imgList = []
         linkList = []
-        
+
 
         for divtag in soup.find_all("div", {"class": "prodprice"}):
             #print (divtag.text)
@@ -53,13 +54,14 @@ def getPortoPoloData(soup):
                 newRow.append(result[3])
                 newRow.append(result[4])
                 newRow.append(getPrice(priceList[x]))
-            
-            
+
+
                 insertdb(newRow[0], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[7], newRow[8], "porto polo")
             except IndexError:
                     print("product incomplete")
+                    addError("porto polo")
             x = x + 1
-                
+
 
 
 
@@ -87,7 +89,7 @@ def PortoPolo():
 
 
     x = 0
-    
+
     for i in urlList:
         x += 1
         try:
@@ -99,4 +101,3 @@ def PortoPolo():
             print("could not connect to webpage")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
           + "PAGE IS FINISHED " + str(x) + "\n" + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-

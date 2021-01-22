@@ -4,6 +4,7 @@ from config import insertdb
 from get_html import getHTML, getSoup
 from product_details import gettype
 from get_price import getPrice
+from errors import addError
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #                       SATS POLO WEBSITE
@@ -31,11 +32,14 @@ def getSatsPoloData(soup):
             for productPrice in litag.find_all("span", {"class" : "price"}):
                 #print(productPrice.text)
                 newRow.append(getPrice(productPrice.text))
-                
-            
-            
-            insertdb(newRow[1], newRow[0], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[7], newRow[8], "sats_polo")
-                    
+
+
+            try:
+                insertdb(newRow[1], newRow[0], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[7], newRow[8], "sats_polo")
+            except IndexError:
+                    print("product incomplete")
+                    addError("sats polo")
+
 
 def SatsPolo():
     urlList = ["https://www.satsfaction.com/shop/page/1/",
@@ -58,5 +62,3 @@ def SatsPolo():
         getSatsPoloData(soup)
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
           + "PAGE IS FINISHED " + i + "\n" + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-
-

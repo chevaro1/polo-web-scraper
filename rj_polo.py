@@ -4,6 +4,7 @@ from config import insertdb
 from get_html import getHTML, getSoup
 from product_details import gettype
 from get_price import getPrice
+from errors import addError
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,7 +38,11 @@ def getRJPoloData(soup):
                     #print(productPrice.text)
                     price = productPrice.text.strip()
                     newRow.append(getPrice(price))
-                insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], "RJ_Polo")
+                try:
+                    insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], "RJ_Polo")
+                except IndexError:
+                        print("product incomplete")
+                        addError("rj polo")
 
 def RJPolo():
     urlList = ["https://www.rjpolo.com/instinct-polo-helmets-70-c.asp",
@@ -68,9 +73,9 @@ def RJPolo():
                ]
     print("\n" + "\n" + "Connecting to RJ POLO WEBSITE" + "\n" + "\n")
 
-    
+
     x = 0
-    
+
     for i in urlList:
         x += 1
         HTML = getHTML(i)
@@ -78,5 +83,3 @@ def RJPolo():
         getRJPoloData(soup)
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
           + "PAGE IS FINISHED " + str(x) + "\n" + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        
-

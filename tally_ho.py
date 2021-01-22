@@ -4,6 +4,7 @@ from config import insertdb
 from get_html import getHTML, getSoup
 from product_details import gettype
 from get_price import getPrice
+from errors import addError
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,7 +22,7 @@ def getTallyHoData(soup):
         priceList = []
         imgList = []
         linkList = []
-        
+
 
         for divtag in soup.find_all("div", {"class": "priceoptions"}):
             #print (divtag.text)
@@ -47,7 +48,7 @@ def getTallyHoData(soup):
 
         while x < len(nameList):
             newRow = []
-            
+
             newRow.append(imgList[x])
             newRow.append(linkList[x])
             newRow.append(nameList[x])
@@ -58,19 +59,23 @@ def getTallyHoData(soup):
             newRow.append(result[3])
             newRow.append(result[4])
             newRow.append(getPrice(priceList[x]))
-            
+
             addRow(newRow)
             x = x + 1
-                
+
         #print("outputs: ", list_of_rows)
 
 
 def upload():
     count = 0
     while count < len(list_of_rows):
-        insertdb(list_of_rows[count][0],list_of_rows[count][1],list_of_rows[count][2],
-                 list_of_rows[count][3],list_of_rows[count][4],list_of_rows[count][5],
-                 list_of_rows[count][6],list_of_rows[count][7],list_of_rows[count][8],"tally_ho")
+        try:
+            insertdb(list_of_rows[count][0],list_of_rows[count][1],list_of_rows[count][2],
+                     list_of_rows[count][3],list_of_rows[count][4],list_of_rows[count][5],
+                     list_of_rows[count][6],list_of_rows[count][7],list_of_rows[count][8],"tally_ho")
+        except IndexError:
+                print("product incomplete")
+                addError("tally ho")
         count += 1
 
 
@@ -88,7 +93,7 @@ def TallyHo():
 
 
     x = 0
-    
+
     for i in urlList:
         x += 1
         HTML = getHTML(i)
@@ -98,4 +103,3 @@ def TallyHo():
         upload()
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
           + "PAGE IS FINISHED " + str(x) + "\n" + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-

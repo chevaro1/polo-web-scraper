@@ -15,9 +15,11 @@ def get_active():
 
     result = mycursor.fetchall()
     fun_array = []
+    #print("in get active")
 
     for x in result:
-        if (x[3] == "inactive"):
+        print("looping through websites")
+        if (x[3] == "active"):
             fun_array.append(x[2])
         #print (x[1])
 

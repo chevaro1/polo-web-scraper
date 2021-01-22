@@ -4,6 +4,7 @@ from config import insertdb
 from get_html import getHTML, getSoup
 from product_details import gettype
 from get_price import getPrice
+from errors import addError
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #                           WILLOUGHBY PARK POLO WEBSITE
@@ -15,7 +16,7 @@ def getWPData(soup):
         priceList = []
         imgList = []
         linkList = []
-        
+
 
         for divtag in soup.find_all("div", {"class": "main-gallery-item col-md-3 col-sm-4 col-xs-6"}):
             name = divtag.find('h4')
@@ -51,12 +52,13 @@ def getWPData(soup):
                 newRow.append(result[4])
                 newRow.append(priceList[x])
                 #print(newRow)
-            
+
                 insertdb(newRow[0], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[7], newRow[8], "willoughby park polo")
             except IndexError:
                     print("product incomplete")
+                    addError("willoughby park")
             x = x + 1
-                
+
 
 
 
@@ -70,7 +72,7 @@ def WilloughbyPark():
 
 
     x = 0
-    
+
     for i in urlList:
         x += 1
         try:
@@ -82,4 +84,3 @@ def WilloughbyPark():
             print("could not connect to webpage")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
           + "PAGE IS FINISHED " + str(x) + "\n" + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-

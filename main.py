@@ -15,6 +15,7 @@ from willoughby_park import WilloughbyPark
 from krono_polo import KronoPolo
 from truncate_db import truncate
 from get_active import get_active
+from errors import saveErrorLog
 
 print("Application running")
 truncate()
@@ -45,7 +46,11 @@ for x in res:
 print("deleting duplicates")
 deleteDup()
 
+print("saving error log")
+saveErrorLog()
+
 print("application complete")
+
 
 
 # to do list

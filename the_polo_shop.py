@@ -4,6 +4,7 @@ from config import insertdb
 from get_html import getHTML, getSoup
 from product_details import gettype
 from get_price import getPrice
+from errors import addError
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #                           THE POLO SHOP WEBSITE
@@ -20,7 +21,7 @@ def getThePoloShopData(soup):
             for imgtag in litag.find_all("img"):
                 #print ("image link = " + imgtag["src"])
                 newRow.append(imgtag["src"])
-                break 
+                break
             #for productName in litag.find_all("a", {"class": "ProductDetails"}):
             #for productName in litag.find_all({"class": "ProductDetails"}):
             for productName in litag.find_all("div", {"class": "ProductDetails"}):
@@ -37,7 +38,7 @@ def getThePoloShopData(soup):
                 newRow.append(result[4])
                 #print("product link: ")
                 link = productName.find('a')
-                newRow.append(link.get('href'))                
+                newRow.append(link.get('href'))
                 #print('\n' + 'name = ' + name)
             for productPrice in litag.find_all("div", {"class" : "ProductDetails"}):
                 #print("price = " + productPrice.text)
@@ -51,6 +52,7 @@ def getThePoloShopData(soup):
                 insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], "The Polo Shop")
             except IndexError:
                     print("product incomplete")
+                    addError("the polo shop")
 
 
 
@@ -74,7 +76,7 @@ def thePoloShop():
 
 
     x = 0
-    
+
     for i in urlList:
         x += 1
         HTML = getHTML(i)

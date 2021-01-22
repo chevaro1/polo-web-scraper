@@ -1,5 +1,6 @@
 from datetime import date
 import mysql.connector
+from errors import addError
 
 
 mydb = mysql.connector.connect(
@@ -33,3 +34,4 @@ def insertdb(img, link, name, brand, category, product, gender, colour, price, w
         print(mycursor.rowcount, "record inserted.")
     except:
         print("record insertion failed")
+        addError(website)

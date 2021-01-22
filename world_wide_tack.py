@@ -4,6 +4,7 @@ from config import insertdb
 from get_html import getHTML, getSoup
 from product_details import gettype
 from get_price import getPrice
+from errors import addError
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,14 +17,14 @@ def getWorldWideTackData(soup):
         priceList = []
         imgList = []
         linkList = []
-        
+
         #PRICE
         for pricetag in soup.find_all("span", {"class": "woocommerce-Price-amount amount"}):
             #print ("price: " + pricetag.text)
             price = pricetag.text
             priceList.append(price)
 
-        
+
         #NAME
         for nametag in soup.find_all("div", {"class": "whiteBox"}):
             #print("product link: ")
@@ -34,9 +35,9 @@ def getWorldWideTackData(soup):
                 name = titletag.text
                 #name.strip('"')
                 nameList.append(name)
-                
 
-        #IMAGE            
+
+        #IMAGE
         for phototag in soup.find_all("a", {"class": "imageContainer"}):
             for pictag in phototag.find_all("img"):
                 #print ("img scr: " + pictag["src"])
@@ -59,13 +60,14 @@ def getWorldWideTackData(soup):
                 newRow.append(result[3])
                 newRow.append(result[4])
                 newRow.append(getPrice(priceList[x]))
-            
-            
+
+
                 insertdb(newRow[0], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[7], newRow[8], "World Wide Tack")
             except IndexError:
                     print("product incomplete")
+                    addError("world wide tack")
             x = x + 1
-                
+
 
 
 
@@ -84,7 +86,7 @@ def WorldWideTack():
 
 
     x = 0
-    
+
     for i in urlList:
         x += 1
         HTML = getHTML(i)
@@ -93,5 +95,3 @@ def WorldWideTack():
         getWorldWideTackData(soup)
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\n"
           + "PAGE IS FINISHED " + str(x) + "\n" + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-
-
