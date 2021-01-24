@@ -24,7 +24,7 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "chaps": [["chap", 3]],
               "headcollar": [["headcollar", 4], ["leadrope", 4], ["lead rope", 4], ["head collar", 3]],
               "mallet": [["mallet", 3], ["stick", 3], ["cane", 3]],
-              "trousers": [["jodphurs", 5], ["polo jeans", 3], ["breeches",5], ["whites", 3], ["white jeans", 3], ["wrangler jean", 3], ["passion polo", 3]],
+              "trousers": [["jodphurs", 5], ["polo jeans", 3], ["breeches",5], ["whites", 3], ["white jeans", 3], ["wrangler jean", 3], ["passion polo", 3], ["riding tights", 3], ["full seat tights", 3], ["tights", 2]],
               "socks": [["socks", 3]],
               "bandages": [["bandage", 4], ["security strap", 3]],
               "spurs": [["spur", 4]],
@@ -32,14 +32,16 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "limb_supports":[["elbow support", 3], ["elbow guard", 3], ["knee support", 3], ["ankle support", 3], ["wrist support", 3], ["wrist wrap", 3], ["wrist compression wrap", 3], ["back support", 3], ["elbow pad", 3]],
               "studs":[["stud", 3]],
               "hoof_oil":[["hoof oil", 3], ["Kevin Bacon", 3], ["Effol", 3]],
-              "rug":[["Summer Sheets", 3], ["weatherbeeta", 3], ["turnout rug", 3]]
+              "rug":[["Summer Sheets", 3], ["weatherbeeta", 3], ["turnout rug", 3]],
+              "show_jacket":[["show jacket", 4]],
+              "masks": [["face mask", 4], ["mask", 2], ["face covering", 4]]
               }
-              
+
 
 
 
 brands = [["casablanca", 5], ["ona", 5], ["charles owen", 5], ["armis", 5], ["instinct", 4], ["salvavita", 5], ["lascano", 5],
-         ["pampeano", 5], ["ainsley", 5], ["ssg", 5], ["professionals choice", 2], ["krono", 5], ["sabona", 5], 
+         ["pampeano", 5], ["ainsley", 5], ["ssg", 5], ["professionals choice", 2], ["krono", 5], ["sabona", 5],
          ["berkeley", 5], ["edition", 1], ["tally ho farm", 5], ["oakley", 5], ["rj polo", 1], ["stephens", 2],
          ["sats polo", 1], ["arma", 2], ["eskadron", 5], ["le mieux", 5], ["sabona", 4], ["kneeland", 3], ["vac", 1],
          ["woof wear", 3], ["franklin", 3], ["hook", 3], ["macwet", 2], ["weatherbeeta", 4], ["rambo", 3], ["mac wet", 3]]
@@ -76,7 +78,7 @@ prodtype = {"bag": [],
             }
 
 gend = [["men", " man", 3], ["men", " men", 3], ["men", " male", 3], ["women", "woman", 3], ["women", "women", 3], ["women", "female", 3], ["women", "ladies", 3], ["women", "lady", 3],["child", "child", 4], ["child", "kid", 4], ["child", "junior", 4], ["child","baby", 4]]
-         
+
 
 colour_list = [" red", "yellow", "pink", "green", "blue", "navy", "brown", "black", "white", "grey", "orange", "turquiose", "aqua", "camoflauge", "gold"]
 
@@ -149,7 +151,7 @@ def productname(product, cat):
         if i[0] in product:
             name.append(i[0])
             weight.append(i[1])
-            
+
     #print("passed 2")
     try:
         ret1, acc_m = productacc(product, cat)
@@ -162,12 +164,12 @@ def productname(product, cat):
     #print("passed 3")
     #print(len(weight))
     if len(weight) != 0:
-        
+
         m = max(weight)
         res = [i for i, j in enumerate(weight) if j == m]
         final = []
         #print(m)
-        
+
         for i in res:
             final.append(name[i])
 
@@ -193,7 +195,7 @@ def productacc(product, cat):
     #print("product acc called")
     name = []
     weight = []
-    
+
     try:
         for i in prodtype[(cat + "_accessories")]:
             if i[0] in product:
@@ -202,15 +204,15 @@ def productacc(product, cat):
     except:
         pass
         #print("no accessory list")
-            
-        
+
+
     if len(weight) != 0:
 
         m = max(weight)
         res = [i for i, j in enumerate(weight) if j == m]
         final = []
 
-        
+
         for i in res:
             final.append(name[i])
 
@@ -219,7 +221,7 @@ def productacc(product, cat):
 
         #print(ret)
         #print(m)
-        
+
         return ret, m
     else:
         return "unknown"
@@ -236,16 +238,16 @@ def getbrand(product):
         if i[0] in product:
             name.append(i[0])
             weight.append(i[1])
-            
 
-            
+
+
     if len(weight) != 0:
-        
+
         m = max(weight)
         res = [i for i, j in enumerate(weight) if j == m]
         final = []
 
-    
+
         for i in res:
             final.append(name[i])
 
@@ -253,7 +255,7 @@ def getbrand(product):
         return ret
     else:
         return "unknown"
-    
+
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -263,7 +265,7 @@ def getbrand(product):
 def category(product):
     cat = []
     weight = []
-    
+
     for key in categories:
         for i in categories[key]:
             if i[0] in product:
@@ -273,8 +275,8 @@ def category(product):
     if len(weight) != 0:
         m = max(weight)
         res = [i for i, j in enumerate(weight) if j == m]
-        final = []  
-        
+        final = []
+
         for i in res:
             final.append(cat[i])
 
@@ -292,19 +294,19 @@ def category(product):
 def gender(product):
     name = []
     weight = []
-    
+
     for i in gend:
         if i[1] in product:
             name.append(i[0])
             weight.append(i[2])
 
-    if len(weight) != 0:   
+    if len(weight) != 0:
 
         m = max(weight)
         res = [i for i, j in enumerate(weight) if j == m]
         final = []
 
-    
+
         for i in res:
             final.append(name[i])
 
@@ -327,7 +329,7 @@ def colour(product):
 
     if colours == "":
         colours = "unknown"
-    
+
     return colours
 
 
@@ -354,22 +356,3 @@ print("category = " + result[1])
 print("product type = " + result[2])
 print("gender = " + result[3])
 print("colour = " + result[4])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    

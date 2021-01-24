@@ -1,0 +1,22 @@
+product:
+    css: 'div.processed div.item'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: h4
+            xpath: null
+            type: Text
+        price:
+            css: strong
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img.thumb
+            xpath: null
+            type: Image

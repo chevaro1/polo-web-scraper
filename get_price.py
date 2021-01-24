@@ -7,17 +7,17 @@ from decimal import Decimal
 
 
 def getPrice(price):
-    
+
     try:
-        print("PRICE IN GET PRICE = " + price)
+        #print("PRICE IN GET PRICE = " + price)
         price = price.replace("\n", " ")
         price = price.split('£', 1)[1]
         #final = re.search('[0-9.]+', price).group()
-        print("price 1 = " + price)
+        #print("price 1 = " + price)
         price = price.split(" ",1)
         #print("price array =" +  price)
         price = price[0]
-        print("passed trim " + price)
+        #print("passed trim " + price)
         value = Decimal(sub(r'[^\d.]', '', price))
         value = round(value,2)
 

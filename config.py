@@ -2,12 +2,15 @@ from datetime import date
 import mysql.connector
 from errors import addError
 
+#local password global2020, database polo, user global
+# live password VUjH2tGs7nL6xy7x, database william, user william
+
 
 mydb = mysql.connector.connect(
     host="localhost",
-    user="william",
-    password="VUjH2tGs7nL6xy7x",
-    database="william"
+    user="global",
+    password="global2020",
+    database="polo"
     )
 
 today = date.today()
@@ -29,9 +32,11 @@ def insertdb(img, link, name, brand, category, product, gender, colour, price, w
 
         mycursor.execute(sql,val)
 
+
         mydb.commit()
 
         print(mycursor.rowcount, "record inserted.")
     except:
         print("record insertion failed")
+        #print(mycursor._last_executed)
         addError(website)

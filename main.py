@@ -16,6 +16,7 @@ from krono_polo import KronoPolo
 from truncate_db import truncate
 from get_active import get_active
 from errors import saveErrorLog
+from main_scrape import scrapeMain
 
 print("Application running")
 truncate()
@@ -26,6 +27,8 @@ print(res)
 for x in res:
     run = globals()[x]
     run()
+
+scrapeMain()
 
 #SatsPolo()
 #RJPolo()

@@ -4,16 +4,16 @@ import mysql.connector
 
 mydb = mysql.connector.connect(
     host="localhost",
-    user="william",
-    password="VUjH2tGs7nL6xy7x",
-    database="william"
+    user="global",
+    password="global2020",
+    database="polo"
     )
 
 mycursor = mydb.cursor()
 
 def truncate():
 
-    sql = "TRUNCATE william.products"
+    sql = "TRUNCATE polo.products"
 
     mycursor.execute(sql)
 

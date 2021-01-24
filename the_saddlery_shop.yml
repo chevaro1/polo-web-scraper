@@ -1,0 +1,22 @@
+product:
+    css: div.product-wrap
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: 'h4 a'
+            xpath: null
+            type: Text
+        price:
+            css: span.price-now
+            xpath: null
+            type: Text
+        product_link:
+            css: 'h4 a'
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image
