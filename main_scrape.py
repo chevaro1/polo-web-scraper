@@ -13,7 +13,18 @@ sites = ["naylors",
         "online_for_equine",
         "redpost_equestrian",
         "robinsons_equestrian",
-        "the_saddlery_shop"
+        "the_saddlery_shop",
+        "ayr_equestrian",
+        "derby_house_store",
+        "equestrian_world",
+        "equiport",
+        "houghton_country",
+        "ingatestone_saddlery",
+        "kramer",
+        "millbry_hill",
+        "randr_country",
+        "royal_equestrian",
+        "shires_equestrian"
         ]
 
 

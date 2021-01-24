@@ -1,0 +1,22 @@
+product:
+    css: li.ais-Hits-item.sizes-loaded
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: h3.product__title
+            xpath: null
+            type: Text
+        price:
+            css: span.price
+            xpath: null
+            type: Text
+        product_link:
+            css: 'span.product__availability-sizes a'
+            xpath: null
+            type: Link
+        image:
+            css: img.product__image
+            xpath: null
+            type: Image
