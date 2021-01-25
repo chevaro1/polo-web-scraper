@@ -1,22 +1,22 @@
 product:
-    css: a.product-item
+    css: a.itembg
     xpath: null
     multiple: true
     type: Text
     children:
         name:
-            css: span.product-item__title
+            css: h4.item-type
             xpath: null
             type: Text
         price:
-            css: span.product-item-price
+            css: span.money
             xpath: null
             type: Text
         product_link:
-            css: ""
-            xpath: null
+            css: a
+            xpath: ""
             type: Link
         image:
-            css: img
+            css: img.image
             xpath: null
             type: Image

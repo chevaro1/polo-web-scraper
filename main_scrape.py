@@ -4,27 +4,27 @@ from scrape import printData
 
 
 
-sites = ["naylors",
-        "discount_equestrian",
-        "equine_superstore",
-        "equus",
-        "hope_valley_saddlery",
-        "horze",
-        "online_for_equine",
-        "redpost_equestrian",
-        "robinsons_equestrian",
-        "the_saddlery_shop",
-        "ayr_equestrian",
-        "derby_house_store",
-        "equestrian_world",
-        "equiport",
-        "houghton_country",
-        "ingatestone_saddlery",
-        "kramer",
-        "millbry_hill",
-        "randr_country",
-        "royal_equestrian",
-        "shires_equestrian"
+sites = [#"naylors",
+        #"discount_equestrian",
+        #"equine_superstore",
+        #"equus",
+        #"hope_valley_saddlery",
+        #"horze",
+        #"online_for_equine",
+        #"redpost_equestrian",
+        "robinsons_equestrian"
+        #"the_saddlery_shop",
+        #"ayr_equestrian",
+        #"derby_house_store",
+        #"equestrian_world",
+        #"equiport",
+        #"houghton_country",      #cant seem to load all of the js  lazy loader problem scrapy-splash
+        #"ingatestone_saddlery",    # fixed
+        #"kramer",                  #need actual valid links otherwise working
+        #"millbry_hill",              #lazy loader problem scrapy-splash
+        #"randr_country",             # fixed
+        #"royal_equestrian",
+        #"shires_equestrian"
         ]
 
 
@@ -47,17 +47,17 @@ def getScraper(site):
     for key in data:
         count += 1
 
-#        print("key = " + key['link'])
-#        file = key['link']
-#        printData("https://www.naylors.com/men/competition-wear/jodhpurs-and-breeches", yml)
-#        return
+        print("key = " + key['link'])
+        file = key['link']
+        printData("https://www.robinsonsequestrian.com/brand/pikeur", yml)
+        return
 
-        try:
-            print("key = " + key['link'])
-            file = key['link']
-            printData(file, yml)
-        except:
-            print("no products in link")
+#        try:
+#            print("key = " + key['link'])
+#            file = key['link']
+#            printData(file, yml)
+#        except:
+#            print("no products in link")
 
 def scrapeMain():
     length = len(sites)
@@ -67,3 +67,6 @@ def scrapeMain():
         print("website = " + web)
         getScraper(web)
         count += 1
+
+
+scrapeMain()

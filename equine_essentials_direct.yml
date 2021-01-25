@@ -1,22 +1,22 @@
 product:
-    css: a.product-item
+    css: 'form li.product'
     xpath: null
     multiple: true
     type: Text
     children:
         name:
-            css: span.product-item__title
+            css: 'h4.card-title a'
             xpath: null
             type: Text
         price:
-            css: span.product-item-price
+            css: 'div.price-section.price-section--main span.price'
             xpath: null
             type: Text
         product_link:
-            css: ""
+            css: 'h4.card-title a'
             xpath: null
             type: Link
         image:
-            css: img
+            css: 'span.card-image-wrapper:nth-of-type(2) img.card-image'
             xpath: null
             type: Image

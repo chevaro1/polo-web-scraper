@@ -1,19 +1,19 @@
 product:
-    css: a.product-item
+    css: div.product-small.col
     xpath: null
     multiple: true
     type: Text
     children:
         name:
-            css: span.product-item__title
+            css: 'p.name a'
             xpath: null
             type: Text
         price:
-            css: span.product-item-price
+            css: span.price
             xpath: null
             type: Text
         product_link:
-            css: ""
+            css: 'p.name a'
             xpath: null
             type: Link
         image:

@@ -1,22 +1,22 @@
 product:
-    css: a.product-item
+    css: li.product.instock
     xpath: null
     multiple: true
     type: Text
     children:
         name:
-            css: span.product-item__title
+            css: h3.product-title
             xpath: null
             type: Text
         price:
-            css: span.product-item-price
+            css: bdi
             xpath: null
             type: Text
         product_link:
-            css: ""
+            css: a.show_details_button
             xpath: null
             type: Link
         image:
-            css: img
+            css: img.attachment-shop_catalog
             xpath: null
             type: Image

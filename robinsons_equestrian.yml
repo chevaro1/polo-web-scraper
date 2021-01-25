@@ -1,5 +1,5 @@
 product:
-    css: 'div.processed div.item'
+    css: 'div.item clearfix'
     xpath: null
     multiple: true
     type: Text

@@ -33,7 +33,7 @@ def printData(sitelink, yml):
     # Use the same extractor to get the data
     data = e.extract(r.text)
     # Print it again
-
+    #print(r.text)
     dist = data
     key = dist.keys()
     print("SCRAPING NEW WEBSITE")
@@ -48,6 +48,9 @@ def printData(sitelink, yml):
         print("\n" + "\n" + "inside: individual product" + "\n" + "\n")
         newRow.append(a["image"])
         print("name = " + a["name"])
+        print("price = " + a["price"])
+        print("product_link = " + a["product_link"])
+        print("image = " + a["image"])
         name = a["name"].strip()
         newRow.append(name)
         result = (gettype(name))

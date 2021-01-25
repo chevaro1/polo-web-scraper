@@ -15,8 +15,11 @@ def getPrice(price):
         #final = re.search('[0-9.]+', price).group()
         #print("price 1 = " + price)
         price = price.split(" ",1)
+        if price[0] == "":
+            price = price[1]
+        else:
+            price = price[0]
         #print("price array =" +  price)
-        price = price[0]
         #print("passed trim " + price)
         value = Decimal(sub(r'[^\d.]', '', price))
         value = round(value,2)
@@ -29,6 +32,6 @@ def getPrice(price):
 
 
 #vid = getPrice("£35.00 £25.00")
-#vid = getPrice(" Price: £69.99 ")
+#vid = getPrice("£ 22.50")
 #print(vid)
 #print("call out of function")

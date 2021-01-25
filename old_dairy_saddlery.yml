@@ -1,19 +1,19 @@
 product:
-    css: a.product-item
+    css: 'div.productframe:nth-of-type(n+2)'
     xpath: null
     multiple: true
     type: Text
     children:
         name:
-            css: span.product-item__title
+            css: a.clear
             xpath: null
             type: Text
         price:
-            css: span.product-item-price
+            css: div.price
             xpath: null
             type: Text
         product_link:
-            css: ""
+            css: 'a.inputbutton:nth-of-type(2)'
             xpath: null
             type: Link
         image:
