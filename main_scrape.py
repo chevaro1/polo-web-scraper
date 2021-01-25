@@ -4,27 +4,68 @@ from scrape import printData
 
 
 
-sites = [#"naylors",
-        #"discount_equestrian",
-        #"equine_superstore",
-        #"equus",
-        #"hope_valley_saddlery",
-        #"horze",
-        #"online_for_equine",
-        #"redpost_equestrian",
-        "robinsons_equestrian"
-        #"the_saddlery_shop",
-        #"ayr_equestrian",
-        #"derby_house_store",
-        #"equestrian_world",
-        #"equiport",
+sites = ["naylors",
+        "discount_equestrian",
+        "equine_superstore",
+        "equus",
+        "hope_valley_saddlery",
+        "horze",
+        "online_for_equine",
+        "redpost_equestrian",
+        "robinsons_equestrian",
+        "the_saddlery_shop",
+        "ayr_equestrian",
+        "derby_house_store",
+        "equestrian_world",
+        "equiport",
         #"houghton_country",      #cant seem to load all of the js  lazy loader problem scrapy-splash
-        #"ingatestone_saddlery",    # fixed
-        #"kramer",                  #need actual valid links otherwise working
+        "ingatestone_saddlery",    # fixed
+        "kramer",                  #need actual valid links otherwise working
         #"millbry_hill",              #lazy loader problem scrapy-splash
-        #"randr_country",             # fixed
-        #"royal_equestrian",
-        #"shires_equestrian"
+        "randr_country",             # fixed
+        "royal_equestrian",
+        "shires_equestrian",
+        "imperial_equestrian",
+        "equine_essentials_direct",
+        "robinsons_equestrian_uk",
+        "fast_tack_direct",
+        "tack_shop",
+        "dragonfly_saddlery",
+        "equi_supermarket",
+        "edgemere",
+        "church_equestrian",
+        "equiporium",
+        "old_dairy_saddlery",
+        "griggs_equestrian",
+        "the_yard_equine",
+        "the_ranch_store",
+        "all_your_horse_needs",
+        "throstlenest_saddlery",
+        "just_equine",
+        "rb_equestrian",
+        "avily",
+        "barnstaple_equestrian_supplies",
+        "brendon_saddlery",
+        "complete_equestrian",
+        "cool_equestrian",
+        "cork_farm_equestrian",
+        "dash_equestrian",
+        "denchworth_equestrian",
+        "elite_saddlery",
+        "equine_mania",
+        "equitogs",
+        "gilberts_equestrian",
+        "hendry_equestrian_shop",
+        "horse_and_rider",
+        "just_horse_riders",
+        "milton_equestrian",
+        "oakfield_direct",
+        "retford_saddlery",
+        "saddlesdane",
+        "smeeth_saddlery",
+        "speedgate",
+        "the_paddock_pantry",
+        "wadswick"
         ]
 
 
@@ -47,25 +88,28 @@ def getScraper(site):
     for key in data:
         count += 1
 
-        print("key = " + key['link'])
-        file = key['link']
-        printData("https://www.robinsonsequestrian.com/brand/pikeur", yml)
-        return
+#        print("key = " + key['link'])
+#        file = key['link']
+#        printData("https://www.robinsonsequestrian.com/brand/pikeur", yml)
+#        return
 
-#        try:
-#            print("key = " + key['link'])
-#            file = key['link']
-#            printData(file, yml)
-#        except:
-#            print("no products in link")
+        try:
+            print("key = " + key['link'])
+            file = key['link']
+            printData(file, yml)
+        except:
+            print("no products in link")
 
 def scrapeMain():
     length = len(sites)
     count = 0
     while count < length:
         web = sites[count]
-        print("website = " + web)
-        getScraper(web)
+        try:
+            print("website = " + web)
+            getScraper(web)
+        except:
+            print("website failed")
         count += 1
 
 

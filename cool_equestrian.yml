@@ -1,0 +1,22 @@
+product:
+    css: 'ol.products li.item'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: strong.product
+            xpath: null
+            type: Text
+        price:
+            css: span.price-wrapper.price-including-tax
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image

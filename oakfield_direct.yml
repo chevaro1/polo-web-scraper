@@ -1,0 +1,22 @@
+product:
+    css: div.product
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: 'div.product__details__title a.infclick'
+            xpath: null
+            type: Text
+        price:
+            css: span.product__details__prices__price
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image

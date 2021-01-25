@@ -1,0 +1,22 @@
+product:
+    css: div.item
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: a.col-1
+            xpath: null
+            type: Text
+        price:
+            css: 'div.col-1.facetItemDetails div div.col-1'
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image

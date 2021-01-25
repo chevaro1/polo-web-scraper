@@ -1,0 +1,22 @@
+product:
+    css: 'div.SeamlessSearch_searchItems div.col-xs-6'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: div.hbTitle
+            xpath: null
+            type: Text
+        price:
+            css: div.hbPrice
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image

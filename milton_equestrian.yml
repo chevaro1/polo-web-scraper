@@ -1,0 +1,22 @@
+product:
+    css: li.ajax_block_product
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: a.product-name
+            xpath: null
+            type: Text
+        price:
+            css: 'div.right-block div.content_price'
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image

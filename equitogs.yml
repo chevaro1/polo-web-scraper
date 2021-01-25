@@ -1,0 +1,22 @@
+product:
+    css: li.product-snippet
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: 'span:nth-of-type(2)'
+            xpath: null
+            type: Text
+        price:
+            css: p
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image
