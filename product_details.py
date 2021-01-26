@@ -32,7 +32,7 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "limb_supports":[["elbow support", 3], ["elbow guard", 3], ["knee support", 3], ["ankle support", 3], ["wrist support", 3], ["wrist wrap", 3], ["wrist compression wrap", 3], ["back support", 3], ["elbow pad", 3]],
               "studs":[["stud", 3]],
               "hoof_oil":[["hoof oil", 3], ["Kevin Bacon", 3], ["Effol", 3]],
-              "rug":[["Summer Sheets", 3], ["weatherbeeta", 3], ["turnout rug", 3], ["00d", 2], ["00g", 2], ["rug" 1]],
+              "rug":[["Summer Sheets", 3], ["weatherbeeta", 3], ["turnout rug", 3], ["00d", 2], ["00g", 2], ["rug", 1]],
               "show_jacket":[["show jacket", 4]],
               "masks": [["face mask", 4], ["mask", 2], ["face covering", 4]],
               "neck_wear": [["scrunchie", 4], ["stock", 1], ["show tie", 4], ["tie", 2]],
@@ -45,7 +45,7 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "base_layer": [["base layer", 3], ["base layer", 3]],
               "polo_shirt": [["polo shirt", 2]],
               "naf": [["naf", 1]],
-              "equine_america"[["equine america", 1]]
+              "equine_america": [["equine america", 1]]
               }
 
 
