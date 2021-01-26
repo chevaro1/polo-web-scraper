@@ -9,22 +9,22 @@
 
 categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["bag", 1],
               ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
-              "boot": [["tendon boot", 3], ["ballistic", 4], ["over reach", 3], ["tendon", 3], ["Racing Tack replacement straps", 4], ["sport boot", 3], ["skid boot", 3], ["sports boot", 1], ["sports medicine boot", 4], ["bell boot", 4]],
-              "poloboot": [["zip", 1], ["riding boot", 3], ["polo boot", 2], ["layer boots", 2]],
+              "boot": [["tendon boot", 3], ["ballistic", 4], ["over reach", 3], ["tendon", 3], ["Racing Tack replacement straps", 4], ["sport boot", 3], ["skid boot", 3], ["sports boot", 1], ["sports medicine boot", 4], ["bell boot", 4], ["fetlock boot", 3], ["jump boot", 3], ["brushing boot", 3], ["overreach boot", 3]],
+              "poloboot": [["zip", 1], ["riding boot", 3], ["polo boot", 2], ["layer boots", 2], ["boot", 1]],
               "ball": [["ball", 3]],
               "girth": [["overgirth", 3], ["girth", 3]],
               "glove": [["glove", 3], ["carbon pro", 3], ["mac wet", 3], ["franlkin pro classic", 3], ["pro tech", 3], ["speed polo", 3], ["all weather", 3]],
-              "bridle": [["brow band", 3], ["caverson", 3], ["headpiece", 3], ["cheekpiece", 3], ["cheek piece", 3], ["curb chain", 3], ["nose band", 3], ["martingale", 3], ["rein", 3], ["noseband", 3], ["bridle", 3], ["breastplate", 3]],
+              "bridle": [["brow band", 3], ["browband", 3], ["caverson", 3], ["headpiece", 3], ["cheekpiece", 3], ["cheek piece", 3], ["curb chain", 3], ["nose band", 3], ["martingale", 3], ["rein", 3], ["noseband", 3], ["bridle", 3], ["breastplate", 3]],
               "bit": [["gag", 5], ["pelham", 5], ["bit", 5], ["bomber", 2], ["happy tongue", 5], ["eggbutt", 3], ["t bar", 3], ["Cosquejero", 5], ["snaffle", 3]],
               "clothes": [["t-shirt", 5], ["bracelet", 5], ["gilet", 5], ["belt", 3], ["alpargata", 5], ["cap", 1], ["ear ring", 4], ["key ring", 4], ["charm", 4], ["keyring", 4], ["sweater", 3]],
               "whip": [["whip", 3]],
-              "helmet": [["helmet", 3], ["young rider", 3], ["headband", 2], ["skull hat", 3], ["your instinct", 4], ["face guard", 3], ["Polo Headband", 3], ["faceguard", 3]],
+              "helmet": [["helmet", 3], ["skull", 1], ["young rider", 3], ["headband", 2], ["skull hat", 3], ["your instinct", 4], ["face guard", 3], ["Polo Headband", 3], ["faceguard", 3], ["riding hat", 4]],
               "saddle": [["saddle", 3]],
               "glasses": [["glasses", 5], ["oculi", 3], ["goggles", 5], ["lens", 5], ["BluEye", 3], ["eyeshield", 3], ["oakley", 3]],
               "chaps": [["chap", 3]],
               "headcollar": [["headcollar", 4], ["leadrope", 4], ["lead rope", 4], ["head collar", 3]],
               "mallet": [["mallet", 3], ["stick", 3], ["cane", 3]],
-              "trousers": [["jodphurs", 5], ["polo jeans", 3], ["breeches",5], ["whites", 3], ["white jeans", 3], ["wrangler jean", 3], ["passion polo", 3], ["riding tights", 3], ["full seat tights", 3], ["tights", 2]],
+              "trousers": [["jodphurs", 5], ["jodhpurs", 5], ["polo jeans", 3], ["breeches",5], ["whites", 3], ["white jeans", 3], ["wrangler jean", 3], ["passion polo", 3], ["riding tights", 3], ["full seat tights", 3], ["tights", 2]],
               "socks": [["socks", 3]],
               "bandages": [["bandage", 4], ["security strap", 3]],
               "spurs": [["spur", 4]],
@@ -32,9 +32,20 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "limb_supports":[["elbow support", 3], ["elbow guard", 3], ["knee support", 3], ["ankle support", 3], ["wrist support", 3], ["wrist wrap", 3], ["wrist compression wrap", 3], ["back support", 3], ["elbow pad", 3]],
               "studs":[["stud", 3]],
               "hoof_oil":[["hoof oil", 3], ["Kevin Bacon", 3], ["Effol", 3]],
-              "rug":[["Summer Sheets", 3], ["weatherbeeta", 3], ["turnout rug", 3]],
+              "rug":[["Summer Sheets", 3], ["weatherbeeta", 3], ["turnout rug", 3], ["00d", 2], ["00g", 2], ["rug" 1]],
               "show_jacket":[["show jacket", 4]],
-              "masks": [["face mask", 4], ["mask", 2], ["face covering", 4]]
+              "masks": [["face mask", 4], ["mask", 2], ["face covering", 4]],
+              "neck_wear": [["scrunchie", 4], ["stock", 1], ["show tie", 4], ["tie", 2]],
+              "wellington_boots": [["wellington boot", 4], ["wellies", 3]],
+              "grooming_kit": [["grooming box", 3], ["brush", 1]],
+              "muzzle": [["muzzle", 3]],
+              "body_protector": [["body protector", 4]],
+              "wheelbarrow": [["wheelbarrow", 3]],
+              "haynets": [["haynet", 3], ["hay net", 3]],
+              "base_layer": [["base layer", 3], ["base layer", 3]],
+              "polo_shirt": [["polo shirt", 2]],
+              "naf": [["naf", 1]],
+              "equine_america"[["equine america", 1]]
               }
 
 
@@ -44,10 +55,11 @@ brands = [["casablanca", 5], ["ona", 5], ["charles owen", 5], ["armis", 5], ["in
          ["pampeano", 5], ["ainsley", 5], ["ssg", 5], ["professionals choice", 2], ["krono", 5], ["sabona", 5],
          ["berkeley", 5], ["edition", 1], ["tally ho farm", 5], ["oakley", 5], ["rj polo", 1], ["stephens", 2],
          ["sats polo", 1], ["arma", 2], ["eskadron", 5], ["le mieux", 5], ["sabona", 4], ["kneeland", 3], ["vac", 1],
-         ["woof wear", 3], ["franklin", 3], ["hook", 3], ["macwet", 2], ["weatherbeeta", 4], ["rambo", 3], ["mac wet", 3]]
+         ["woof wear", 3], ["franklin", 3], ["hook", 3], ["macwet", 2], ["weatherbeeta", 4], ["rambo", 3], ["mac wet", 3],
+         ["lemieux", 6]]
 
 
-prodtype = {"bag": [],
+prodtype = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
               "boot": [["tendon boot", 4], ["over reach", 3], ["travel boot", 4], ["skid boot", 3], ["sports boot", 3]],
               "poloboot": [],
               "ball": [["arena", 3], ["grass", 3], ["snow", 3]],
