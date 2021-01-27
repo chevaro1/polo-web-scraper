@@ -25,10 +25,13 @@ print("database cleared")
 res = get_active()
 print(res)
 for x in res:
-    run = globals()[x]
-    run()
+    try:
+        run = globals()[x]
+        run()
+    except:
+        print("invalid website")
 
-scrapeMain()
+scrapeMain(res)
 
 #SatsPolo()
 #RJPolo()

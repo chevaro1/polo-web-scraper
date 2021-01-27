@@ -5,7 +5,7 @@ product:
     type: Text
     children:
         name:
-            css: div.name
+            css: div.name,a
             xpath: null
             type: Text
         price:

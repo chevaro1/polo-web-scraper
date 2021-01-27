@@ -28,9 +28,11 @@ def printData(sitelink, yml):
     #print(data)
     #print("sitelink = " + sitelink)
     # Download another page of similar structure
-    r = requests.get(sitelink, timeout=5)
+    r = requests.get(sitelink, timeout=12)
+    #r = requests.get(sitelink)
     #r = requests.get('https://www.naylors.com/')
     # Use the same extractor to get the data
+    #print("requests recieved")
     data = e.extract(r.text)
     # Print it again
     #print(r.text)

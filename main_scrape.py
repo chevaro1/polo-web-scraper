@@ -18,10 +18,10 @@ sites = ["naylors",
         "derby_house_store",
         "equestrian_world",
         "equiport",
-        #"houghton_country",      #cant seem to load all of the js  lazy loader problem scrapy-splash
+        "houghton_country",      #cant seem to load all of the js  lazy loader problem scrapy-splash
         "ingatestone_saddlery",    # fixed
         "kramer",                  #need actual valid links otherwise working
-        #"millbry_hill",              #lazy loader problem scrapy-splash
+        "millbry_hill",              #lazy loader problem scrapy-splash
         "randr_country",             # fixed
         "royal_equestrian",
         "shires_equestrian",
@@ -90,7 +90,7 @@ def getScraper(site):
 
 #        print("key = " + key['link'])
 #        file = key['link']
-#        printData("https://www.robinsonsequestrian.com/brand/pikeur", yml)
+#        printData("https://www.equinesuperstore.co.uk/horse/horse-rugs/hoods-shoulder-guards.html", yml)
 #        return
 
         try:
@@ -100,11 +100,11 @@ def getScraper(site):
         except:
             print("no products in link")
 
-def scrapeMain():
-    length = len(sites)
+def scrapeMain(res):
+    length = len(res)
     count = 0
     while count < length:
-        web = sites[count]
+        web = res[count]
         try:
             print("website = " + web)
             getScraper(web)
@@ -112,5 +112,17 @@ def scrapeMain():
             print("website failed")
         count += 1
 
+def scrapeSingle(res):
+    length = len(res)
+    count = 0
+    while count < length:
+        web = res[count]
+        try:
+            print("website = " + web)
+            getScraper(web)
+        except:
+            print("website failed")
+        count += 1
 
-#scrapeMain()
+res = ["equine_superstore"]
+#scrapeSingle(res)

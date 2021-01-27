@@ -37,15 +37,17 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "masks": [["face mask", 4], ["mask", 2], ["face covering", 4]],
               "neck_wear": [["scrunchie", 4], ["stock", 1], ["show tie", 4], ["tie", 2]],
               "wellington_boots": [["wellington boot", 4], ["wellies", 3]],
-              "grooming_kit": [["grooming box", 3], ["brush", 1]],
+              "grooming_kit": [["grooming box", 3], ["brush", 1], ["grooming kit", 5], ["grooming bag", 5], ["grooming", 2]],
               "muzzle": [["muzzle", 3]],
               "body_protector": [["body protector", 4]],
               "wheelbarrow": [["wheelbarrow", 3]],
-              "haynets": [["haynet", 3], ["hay net", 3]],
+              "haynets": [["haynet", 3], ["hay net", 3], ["hay bag", 5]],
               "base_layer": [["base layer", 3], ["base layer", 3]],
               "polo_shirt": [["polo shirt", 2]],
               "naf": [["naf", 1]],
-              "equine_america": [["equine america", 1]]
+              "equine_america": [["equine america", 1]],
+              "stirrup":[["stirrup", 3]],
+              "plaiting":[["plaiting", 4]]
               }
 
 
@@ -59,7 +61,7 @@ brands = [["casablanca", 5], ["ona", 5], ["charles owen", 5], ["armis", 5], ["in
          ["lemieux", 6]]
 
 
-prodtype = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
+prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["bum bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
               "boot": [["tendon boot", 4], ["over reach", 3], ["travel boot", 4], ["skid boot", 3], ["sports boot", 3]],
               "poloboot": [],
               "ball": [["arena", 3], ["grass", 3], ["snow", 3]],
@@ -360,11 +362,11 @@ def change_cat(categ, add):
 
 
 #word = "YOUNG RIDER POLO HELMET LINER KID PINK blue green"
-word = "Weatherbeeta Kool Coat in Blue"
-print(word)
-result = gettype(word)
-print("brand = " + result[0])
-print("category = " + result[1])
-print("product type = " + result[2])
-print("gender = " + result[3])
-print("colour = " + result[4])
+#word = "Weatherbeeta Kool Coat in Blue"
+#print(word)
+#result = gettype(word)
+#print("brand = " + result[0])
+#print("category = " + result[1])
+#print("product type = " + result[2])
+#print("gender = " + result[3])
+#print("colour = " + result[4])
