@@ -5,6 +5,7 @@ from config import insertdb
 from product_details import gettype
 from get_price import getPrice
 from errors import addError
+from site_editor import clean_up
 
 def printData(sitelink, yml):
     here = os.path.dirname(os.path.abspath(__file__))
@@ -66,6 +67,7 @@ def printData(sitelink, yml):
             price = "n/a"
             price = a["price"].strip()
             newRow.append(getPrice(price))
+            newRow = clean_up(site, newRow)
             #print(newRow)
             insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], site)
         except IndexError:

@@ -28,8 +28,10 @@ for x in res:
     try:
         run = globals()[x]
         run()
+        res.remove(x)
     except:
         print("invalid website")
+
 
 scrapeMain(res)
 
