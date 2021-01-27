@@ -42,9 +42,16 @@ def addError(site):
 
 def saveErrorLog():
     length = len(log)
+    try:
+        print("error log print out:")
+        print(log)
+    except:
+        print("unable to print out error log")
     for i in range(length):
-        saveLogData(log[i][0], log[i][1])
-
+        try:
+            saveLogData(log[i][0], log[i][1])
+        except:
+            print("error trying to save data log for unknown reason")
 
 def saveLogData(site, errors):
 
