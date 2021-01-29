@@ -49,12 +49,13 @@ def saveErrorLog():
         print("unable to print out error log")
     for i in range(length):
         try:
+            print("saving individual error")
             saveLogData(log[i][0], log[i][1])
         except:
             print("error trying to save data log for unknown reason")
 
 def saveLogData(site, errors):
-
+    print("saving: site = " + site + " errors = " + errors)
     sql = "INSERT INTO error_log (datetime, website, errors) VALUES (%s, %s, %s)"
     val = (today, site, errors)
 

@@ -47,11 +47,11 @@ def printData(sitelink, yml):
       for a in dist[x]:
         try:
             newRow = []
-            #print(a)
+            print(a)
             print("\n" + "\n")
             print("\n" + "\n" + "inside: individual product" + "\n" + "\n")
             newRow.append(a["image"])
-            print("name = " + a["name"])
+            #print("name = " + a["name"])
             #print("price = " + a["price"])
             #print("product_link = " + a["product_link"])
             #print("image = " + a["image"])
@@ -68,6 +68,7 @@ def printData(sitelink, yml):
             price = a["price"].strip()
             newRow.append(getPrice(price))
             newRow = clean_up(site, newRow)
+
             #print(newRow)
             insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], site)
         except IndexError:
