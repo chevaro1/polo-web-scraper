@@ -25,7 +25,7 @@ def insertdb(img, link, name, brand, category, product, gender, colour, price, w
         #img = "www"
         #name = "boots"
         #price = "100"
-
+        website = website.replace(' ','_')
 
         sql = "INSERT INTO products (date, img, link, name, brand, category, product, gender, colour, price, website) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         val = (date, img, link, name, brand, category, product, gender, colour, price, website)

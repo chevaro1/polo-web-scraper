@@ -9,8 +9,8 @@
 
 categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["bag", 1],
               ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
-              "boot": [["tendon boot", 3], ["front boot", 3], ["hing boot", 3], ["ballistic", 4], ["over reach", 3], ["tendon", 3], ["Racing Tack replacement straps", 4], ["sport boot", 3], ["skid boot", 3], ["sports boot", 1], ["sports medicine boot", 4], ["bell boot", 4], ["fetlock boot", 3], ["jump boot", 3], ["brushing boot", 3], ["overreach boot", 3], ["fetlock ring", 2]],
-              "poloboot": [["zip", 1], ["riding boot", 3], ["polo boot", 2], ["layer boots", 2], ["boot", 2]],
+              "boot": [["tendon boot", 3], ["front boot", 3], ["hing boot", 3], ["ballistic", 4], ["over reach", 3], ["tendon", 3], ["Racing Tack replacement straps", 4], ["sport boot", 3], ["skid boot", 3], ["sports boot", 2], ["sports medicine boot", 4], ["bell boot", 4], ["fetlock boot", 3], ["jump boot", 3], ["brushing boot", 3], ["overreach boot", 3], ["fetlock ring", 2]],
+              "poloboot": [["zip", 1], ["riding boot", 3], ["polo boot", 2], ["layer boots", 2], ["boot", 1]],
               "ball": [["ball", 3]],
               "girth": [["overgirth", 3], ["girth", 3], ["stud girth", 4]],
               "glove": [["glove", 3], ["carbon pro", 3], ["mac wet", 3], ["franlkin pro classic", 3], ["pro tech", 3], ["speed polo", 3], ["all weather", 3]],
