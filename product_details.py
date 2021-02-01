@@ -17,7 +17,7 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "glove": [["glove", 3], ["carbon pro", 3], ["mac wet", 3], ["franlkin pro classic", 3], ["pro tech", 3], ["speed polo", 3], ["all weather", 3]],
               "bridle": [["brow band", 3], ["browband", 3], ["caverson", 3], ["headpiece", 3], ["cheekpiece", 3], ["cheek piece", 3], ["curb chain", 5], ["nose band", 3], ["martingale", 3], ["rein", 3], ["noseband", 3], ["bridle", 4], ["breastplate", 3], ["flash", 3]],
               "bit": [["gag", 5], ["loose ring", 3], ["pelham", 5], ["bit", 3], ["bomber", 2], ["happy tongue", 5], ["eggbutt", 3], ["t bar", 3], ["Cosquejero", 5], ["snaffle", 3]],
-              "clothes": [["t-shirt", 5], ["bracelet", 5], ["gilet", 5], ["belt", 3], ["alpargata", 5], ["baseball cap", 4] ["cap", 1], ["ear ring", 4], ["key ring", 4], ["charm", 4], ["keyring", 4], ["sweater", 3]],
+              "clothes": [["t-shirt", 5], ["bracelet", 5], ["gilet", 5], ["belt", 3], ["alpargata", 5], ["baseball cap", 4], ["cap", 1], ["ear ring", 4], ["key ring", 4], ["charm", 4], ["keyring", 4], ["sweater", 3]],
               "whip": [["whip", 3], ["crop", 3], ["baton", 4], ["bat ", 2]],
               "helmet": [["helmet", 3], ["skull", 1], ["young rider", 3], ["headband", 2], ["skull hat", 3], ["your instinct", 4], ["face guard", 3], ["Polo Headband", 3], ["faceguard", 3], ["riding hat", 4]],
               "saddle": [["saddle", 1], ["bates", 3], ["saddle cover", 3], ["Saddle rack", 3], ["saddle soap", 3]],
@@ -133,7 +133,7 @@ prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["bum bag"
               "hoof_oil":[],
               "rug":[],
               "plaiting":[["comb", 4], ["band", 3], ["thread", 2]],
-              "ball": [["jolly ball", 3], ["horse playball", 3], ["kong", 3], ["snak-a-ball", 4], ["hay", 3] ["wash ball", 3], ["feeder", 3], ["treat ball", 3], ["hangin' ball", 4], ["equine play ball", 4], ["carrot", 3]],
+              "ball": [["jolly ball", 3], ["horse playball", 3], ["kong", 3], ["snak-a-ball", 4], ["hay", 3], ["wash ball", 3], ["feeder", 3], ["treat ball", 3], ["hangin' ball", 4], ["equine play ball", 4], ["carrot", 3]]
             }
 
 gend = [["men", " man", 3], ["men", " men", 3], ["men", " male", 3], ["women", "woman", 3], ["women", "women", 3], ["women", "female", 3], ["women", "ladies", 3], ["women", "lady", 3],["child", "child", 4], ["child", "kid", 4], ["child", "junior", 4], ["child","baby", 4]]
