@@ -8,7 +8,7 @@ from product_details import gettype
 from get_price import getPrice
 from errors import addError
 from site_editor import clean_up
-import re
+#import re
 
 
 
@@ -43,7 +43,8 @@ def scrape(yml, link):
         # Download another page of similar structure
         r = session.get(link, timeout=17)
         #r = session.get("https://www.millbryhill.co.uk/global-herbs-m1", timeout=17)
-        r.html.render(retries=3, wait=5, timeout=20, scrolldown=10)
+        r.html.render(retries=3, wait=5, timeout=20)
+        #r.html.render(wait=5)
         #r = requests.get(sitelink)
         #r = requests.get('https://www.naylors.com/')
         # Use the same extractor to get the data
@@ -90,7 +91,7 @@ def scrape(yml, link):
                   except:
                     print("invalid product")
           except:
-              print("no products in page")
+              print("no products in page " + link)
 
         #if(site == "millbry_hill" & re.search("^page=[0-9]", link[-6:]) & link[-1:] != 3):
         #    linkno = int(link[-1:]) + 1
@@ -129,8 +130,9 @@ def launchsite(site):
     #    scrape(i)
 
     #yyml = "horze"
-    pool = Pool(processes=5, maxtasksperchild=1)
-    pool.starmap(scrape, links[:10])
+    #pool = Pool(processes=5, maxtasksperchild=1)
+    pool = Pool(processes=5)
+    pool.starmap(scrape, links)
     pool.close()
     pool.terminate()
     pool.join()
