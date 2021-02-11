@@ -17,6 +17,7 @@ from truncate_db import truncate
 from get_active import get_active
 from errors import saveErrorLog
 from main_scrape import scrapeMain
+from scrapejs import runscrape
 
 print("Application running")
 truncate()
@@ -34,6 +35,7 @@ for x in res:
 
 
 scrapeMain(res)
+runscrape()
 
 #SatsPolo()
 #RJPolo()

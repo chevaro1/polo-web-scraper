@@ -19,4 +19,5 @@ product:
         image:
             css: img
             xpath: null
-            type: Image
+            type: Attribute
+            attribute: data-src

@@ -1,7 +1,8 @@
 import json
 import os
 from scrape import printData
-
+from multiprocessing import Pool
+import gc
 
 
 sites = ["naylors",
@@ -72,39 +73,41 @@ sites = ["naylors",
 
 def getScraper(site):
 
-    sitelink = site + ".json"
-    yml = site + ".yml"
+        sitelink = site + ".json"
+        links = []
 
-    here = os.path.dirname(os.path.abspath(__file__))
+        here = os.path.dirname(os.path.abspath(__file__))
 
-    filename = os.path.join(here, sitelink)
+        filename = os.path.join(here, sitelink)
 
-    with open(filename) as f:
-        data = json.load(f)
+        with open(filename) as f:
+            data = json.load(f)
 
-    #print("yml = " + yml + "json = " + json)
-    count = 0
+        for key in data:
+            temp = []
+            temp.append(site + ".yml")
+            temp.append(key["link"])
+            links.append(temp)
 
-    for key in data:
-        count += 1
+        #print(links)
 
-#        print("key = " + key['link'])
-#        file = key['link']
-#        printData("https://www.equinesuperstore.co.uk/horse/horse-rugs/hoods-shoulder-guards.html", yml)
-#        return
+        #for i in links[:20]:
+        #    scrape(i)
 
-        try:
-            print("key = " + key['link'])
-            file = key['link']
-            printData(file, yml)
-        except:
-            print("no products in link")
+        #yyml = "horze"
+        pool = Pool(processes=5, maxtasksperchild=1)
+        pool.starmap(printData, links)
+        pool.close()
+        pool.terminate()
+        pool.join()
+        gc.collect()
 
 def scrapeMain(res):
     length = len(res)
     count = 0
     while count < length:
         web = res[count]
+        #getScraper(web)
         try:
             print("website = " + web)
             getScraper(web)
@@ -117,6 +120,7 @@ def scrapeSingle(res):
     count = 0
     while count < length:
         web = res[count]
+        #getScraper(web)
         try:
             print("website = " + web)
             getScraper(web)
@@ -124,5 +128,5 @@ def scrapeSingle(res):
             print("website failed")
         count += 1
 
-#res = ["equine_superstore"]
-#scrapeSingle(res)
+#res = ["naylors"]
+#scrapeMain(res)

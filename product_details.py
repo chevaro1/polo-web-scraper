@@ -7,20 +7,20 @@
 
 
 
-categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["bag", 1],
+categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["bag", 1], ["luggage", 4],
               ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
-              "boot": [["tendon boot", 3], ["front boot", 3], ["hing boot", 3], ["ballistic", 4], ["over reach", 3], ["tendon", 3], ["Racing Tack replacement straps", 4], ["sport boot", 3], ["skid boot", 3], ["sports boot", 2], ["sports medicine boot", 4], ["bell boot", 4], ["fetlock boot", 3], ["jump boot", 3], ["brushing boot", 3], ["overreach boot", 3], ["fetlock ring", 2]],
-              "poloboot": [["zip", 1], ["riding boot", 3], ["polo boot", 2], ["layer boots", 2], ["boot", 1], ["jodhpur boot", 4]],
+              "boot": [["tendon boot", 3], ["support boot", 3], ["ice boot", 3], ["magnetic boot", 3], ["therapeutic support boot", 3], ["aero magneto", 3], ["ice vibe", 4], ["ice-vibe", 4], ["magnetik", 3], ["hock boot", 3], ["dressage boot", 4], ["splint boot", 3], ["hoof boot", 3], ["front boot", 3], ["reach boot", 3], ["horse boot", 3], ["travel boot", 3], ["travelling boot", 3], ["hing boot", 3], ["poultice boot", 3], ["ballistic", 4], ["over reach", 3], ["tendon", 3], ["Racing Tack replacement straps", 4], ["sport boot", 3], ["freeze boot", 3], ["therapy boot", 3], ["magno boot", 3], ["veredus", 3], ["kentucky horsewear", 4], ["christ boot", 3], ["stable boot", 3], ["skid boot", 3], ["sports boot", 2], ["sports medicine boot", 4], ["bell boot", 4], ["fetlock boot", 3], ["jump boot", 3], ["brushing boot", 3], ["overreach boot", 3], ["fetlock ring", 2]],
+              "poloboot": [["riding boot", 3], ["ariat barn", 4], ["country boots", 3], ["twin gore", 3], ["polo boot", 2], ["layer boots", 2], ["boot", 1], ["jodhpur boot", 4]],
               "ball": [["jolly ball", 3], ["horse playball", 3], ["kong", 3], ["snak-a-ball", 4], ["hay ball", 3], ["hayball", 3], ["wash ball", 3], ["feeder ball", 3], ["ball feeder", 3], ["treat ball", 3], ["hangin' ball", 4], ["equine play ball", 4], ["carrot ball", 3]],
               "polo_ball": [["polo ball", 3], ["umpire ball bag", 4], ["ball bag", 3]],
-              "girth": [["overgirth", 3], ["girth", 3], ["stud girth", 4]],
+              "girth": [["overgirth", 3], ["girth", 3], ["stud girth", 4], ["stud guard", 4]],
               "glove": [["glove", 3], ["carbon pro", 3], ["mac wet", 3], ["franlkin pro classic", 3], ["pro tech", 3], ["speed polo", 3], ["all weather", 3]],
               "bridle": [["brow band", 3], ["browband", 3], ["caverson", 3], ["headpiece", 3], ["cheekpiece", 3], ["cheek piece", 3], ["curb chain", 5], ["nose band", 3], ["martingale", 3], ["rein", 3], ["noseband", 3], ["bridle", 4], ["breastplate", 3], ["flash", 3]],
               "bit": [["gag", 5], ["loose ring", 3], ["pelham", 5], ["bit", 3], ["bomber", 2], ["happy tongue", 5], ["eggbutt", 3], ["t bar", 3], ["Cosquejero", 5], ["snaffle", 3]],
-              "clothes": [["t-shirt", 5], ["bracelet", 5], ["gilet", 5], ["belt", 3], ["alpargata", 5], ["baseball cap", 4], ["cap", 1], ["ear ring", 4], ["key ring", 4], ["charm", 4], ["keyring", 4], ["sweater", 3]],
+              "clothes": [["t-shirt", 5], ["bomber jacket", 4], ["bracelet", 5], ["gilet", 5], ["belt", 3], ["alpargata", 5], ["baseball cap", 4], ["cap", 1], ["ear ring", 4], ["earring", 4], ["pendant", 4], ["key ring", 4], ["charm", 4], ["keyring", 4], ["sweater", 3]],
               "whip": [["whip", 3], ["crop", 3], ["baton", 4], ["bat ", 2]],
               "helmet": [["helmet", 3], ["skull", 1], ["young rider", 3], ["headband", 2], ["skull hat", 3], ["your instinct", 4], ["face guard", 3], ["Polo Headband", 3], ["faceguard", 3], ["riding hat", 4]],
-              "saddle": [["saddle", 1], ["bates", 3], ["saddle cover", 3], ["Saddle rack", 3], ["saddle soap", 3]],
+              "saddle": [["saddle", 1], ["bareback riding", 3], ["bates", 3], ["saddle cover", 3], ["Saddle rack", 3], ["saddle soap", 3]],
               "numnah": [["saddle cloths", 3], ["saddlecloth", 3], ["saddle blanket", 3], ["gel saddle pad", 3], ["saddle pad", 3], ["numnah", 4]],
               "glasses": [["glasses", 5], ["oculi", 3], ["goggles", 5], ["lens", 5], ["BluEye", 3], ["eyeshield", 3], ["oakley", 3]],
               "chaps": [["chap", 3]],
@@ -76,18 +76,20 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "hoof_dressing": [["hoof dressing", 3]],
               "hoof_pick": [["hoof pick", 3]],
               "balancer": [["balancer", 3]],
-              "feed": [["baileys", 4], ["feed", 1], ["hi-fi", 3], ["alfa", 3], ["chaff", 2], ["molasses", 2], ["20kg", 1], ["15kg", 1]],
+              "feed": [["baileys", 4], ["feed", 1], ["hi-fi", 3], ["alfa", 3], ["chaff", 2], ["molasses", 2], ["20kg", 1], ["15kg", 1], ["burgess excel", 3], ["rabbit food", 3]],
               "scoops": [["scoop", 2]],
               "jumping_block": [["jump block", 2], ["pro jump", 1], ["jumping block", 2]],
               "tools": [["broom", 3], ["fork", 3], ["tidee", 3]],
               "buckets": [["bucket", 1]],
               "manger": [["manger", 3]],
               "mounting block": [["mounting block", 3]],
-              "treats": [["treats", 2]],
+              "treats": [["treats", 2], ["treat bar", 4], ["bizzy bites", 4]],
               "toys": [["toy", 1]],
               "bin": [["bin ", 1]],
               "fencing": [["battery", 3]],
-              "chalk": [["chalk", 4]]
+              "chalk": [["chalk", 4]],
+              "rabbit": [["rabbit", 4]],
+              "handbag": [["handbag", 3], ["cartridgebag", 3], ["tote bag", 3], ["gift bag", 4], ["bottle bag", 3], ["shoulder bag", 3], ["cluth flap", 2], ["grab bag", 2], ["shopper bag", 2], ["tote bag", 3]]
               }
 
 
@@ -99,18 +101,19 @@ brands = [["casablanca", 5], ["ona", 1], ["charles owen", 5], ["armis", 5], ["in
          ["sats polo", 1], ["arma", 2], ["eskadron", 5], ["le mieux", 5], ["sabona", 4], ["kneeland", 3], ["vac", 1],
          ["woof wear", 3], ["franklin", 3], ["hook", 3], ["macwet", 2], ["weatherbeeta", 4], ["rambo", 3], ["mac wet", 3],
          ["lemieux", 6], ["equine america", 3], ["pikeur", 3], ["shires", 3], ["aubrion", 3], ["ariat", 3], ["harry hall", 4],
-         ["cavallo", 3], ["pikeur", 5], ["dublin", 3], ["noble balance", 3], ["Montar Madelyn", 5], ["roeckl", 3]]
+         ["cavallo", 3], ["pikeur", 5], ["dublin", 3], ["noble balance", 3], ["Montar Madelyn", 5], ["roeckl", 3], ["dubarry", 4],
+         ["mountain horse", 3], ["fairfax & favor", 4], ["tattini", 3], ["veredus", 4], ["aigle", 3], ["neue schule", 3]]
 
 
 prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["bum bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
               "boot": [["tendon boot", 4], ["over reach", 3], ["travel boot", 4], ["skid boot", 3], ["sports boot", 3], ["bell boot", 3], ["overreach", 3], ["brushing boot", 3], ["fetlock boot", 3], ["medicine boot", 3]],
-              "poloboot": [],
-              "poloboot_accessories": [["boot jack", 3], ["boot pulls", 3],["laces", 3], ["tree", 3], ["polish", 3], ["spray", 1], ["boot clip", 3], ["liner", 3]],
+              "poloboot": [["country boot", 4], ["carlow", 3], ["kendal", 3], ["carlton", 3], ["groundbreaker", 3], ["muck boot", 3], ["river boot", 3], ["kennet", 3], ["windermere", 3], ["canyon", 3], ["eskimo", 3], ["burford", 3], ["skyline", 3], ["river grain", 3], ["burford", 3], ["abbey", 3], ["eskdale", 3], ["polo boot", 3], ["kensington", 3], ["vermont", 3], ["chelsea", 3], ["gradmere", 3], ["contour", 2], ["ketley", 3], ["aurora", 3], ["heritage", 2], ["galway", 4], ["belford", 3], ["regina", 3], ["berwick", 3], ["riding boot", 3], ["coniston", 4], ["paddock boot", 3], ["moretta", 3], ["waterproof", 1], ["skyline", 3], ["terrain", 3], ["telluride", 3], ["wexford", 3], ["wythburn", 3], ["bromont", 3], ["pinnacle", 3]],
+              "poloboot_accessories": [["boot jack", 3], ["boot mat", 3], ["boot tassels", 3], ["boot pulls", 3],["laces", 3], ["tree", 3], ["polish", 3], ["spray", 1], ["boot clip", 3], ["liner", 3], ["boot tab", 4], ["buckle pins", 3], ["replacement cable", 4], ["jack", 2]],
               "ball": [["arena", 3], ["grass", 3], ["snow", 3]],
               "girth": [],
               "glove": [["shooting glove", 3], ["yard glove", 3], ["technical gloves", 2], ["team roper", 4], ["all weather", 3], ["carbon pro", 4], ["speed", 3], ["pro tech", 4], ["franklin pro classic", 4]],
               "bridle": [["martingale stops", 4], ["brow band", 3], ["breastplate cover", 4], ["nose band", 3], ["reins", 2], ["martingale", 3], ["drop noseband", 3], ["cheek pieces", 3], ["noseband", 2], ["breastplate", 3], ["running reins", 3], ["bridle", 3], ["split reins", 3], ["rein stop", 3], ["curb chain", 3], ["lead rein", 3], ["browband", 3]],
-              "bit": [["gag", 1], ["pelham", 5], ["bomber", 2], ["happy tongue", 3], ["t bar", 3]],
+              "bit": [["gag", 1], ["waterford", 4], ["barry gag", 3], ["snaffle", 2], ["balding", 3], ["pelham", 5], ["bomber", 2], ["eggbut", 4], ["d-ring", 4], ["happy tongue", 3], ["t bar", 3], ["bit guard", 3], ["golf label", 3]],
               "clothes": [],
               "whip": [["lunging", 4], ["dressage", 3], ["schooling", 3], ["polo", 3], ["event bat", 3], ["jumping", 3]],
               "helmet": [["shadowmatt", 5], ["ayr8", 8], ["palermo", 4], ["young rider", 4], ["palermo ii", 7], ["instinct", 1], ["skull", 1], ["samshield", 4], ["kep cromo", 4], ["kask star", 3], ["ventair", 3], ["vent-air", 3], ["salavita", 4]],
@@ -181,7 +184,7 @@ def gettype(product):
         try:
             ptype = productname(product, cat)
         except:
-            print("CATEGORY NOT FOUND PROBABLE WEIGHTING IMBALANCE")
+            print("CATEGORY NOT FOUND PROBABLE WEIGHTING IMBALANCE, NAME = " + product + "\n")
             ptype = "unknown"
     results.append(ptype)
 

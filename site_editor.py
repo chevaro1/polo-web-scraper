@@ -8,7 +8,8 @@ def clean_up(site, row):
         run = globals()[site]
         row = run(row)
     except:
-        print("no clean up script for this site")
+        pass
+        #print("no clean up script for this site")
 
     return row
 
@@ -49,4 +50,15 @@ def gilberts_equestrian(row):
     prefix = "https://www.gilbertsequestrianandcountry.co.uk/"
     row[7] = add_prefix(prefix, row[7])
     row[0] = add_prefix(prefix, row[0])
+    return row
+
+def millbry_hill(row):
+    prefix = "https://www.millbryhill.co.uk"
+    row[7] = add_prefix(prefix, row[7])
+    row[0] = add_prefix(prefix, row[0])
+    return row
+
+def equiport(row):
+    prefix = "https://www.equiport.co.uk"
+    row[7] = add_prefix(prefix, row[7])
     return row

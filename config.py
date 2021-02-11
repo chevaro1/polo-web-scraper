@@ -6,20 +6,23 @@ from errors import addError
 # live password VUjH2tGs7nL6xy7x, database william, user william
 
 
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="global",
-    password="global2020",
-    database="polo"
-    )
+
 
 today = date.today()
 
-mycursor = mydb.cursor()
+
 
 def insertdb(img, link, name, brand, category, product, gender, colour, price, website):
     try:
-        print("IMG = " + img + " Link= " + link + " NAME= " + name + " brand= " + brand + " category= " + category + " product= " + product + " gender= " + gender + " colour= " + colour + " price= " + str(price)  + "\n")
+        mydb = mysql.connector.connect(
+            host="localhost",
+            user="global",
+            password="global2020",
+            database="polo"
+            )
+
+        mycursor = mydb.cursor()
+        #print("IMG = " + img + " Link= " + link + " NAME= " + name + " brand= " + brand + " category= " + category + " product= " + product + " gender= " + gender + " colour= " + colour + " price= " + str(price)  + "\n")
 
         date = today.strftime("%Y-%m-%d")
         #img = "www"
@@ -35,7 +38,7 @@ def insertdb(img, link, name, brand, category, product, gender, colour, price, w
 
         mydb.commit()
 
-        print(mycursor.rowcount, "record inserted.")
+        #print(mycursor.rowcount, "record inserted.")
     except:
         print("record insertion failed")
         #print(mycursor._last_executed)

@@ -17,6 +17,7 @@ product:
             xpath: null
             type: Link
         image:
-            css: img.product-image-photo
+            css: img
             xpath: null
-            type: Image
+            type: Attribute
+            attribute: data-src

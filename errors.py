@@ -12,7 +12,6 @@ mydb = mysql.connector.connect(
 today = datetime.datetime.now()
 
 mycursor = mydb.cursor()
-
 log = []
 
 
@@ -41,6 +40,7 @@ def addError(site):
 
 
 def saveErrorLog():
+    today = datetime.datetime.now()
     length = len(log)
     try:
         print("error log print out:")
@@ -55,7 +55,7 @@ def saveErrorLog():
             print("error trying to save data log for unknown reason")
 
 def saveLogData(site, errors):
-    print("saving: site = " + site + " errors = " + errors)
+    #print("saving: site = " + site + " errors = " + errors)
     sql = "INSERT INTO error_log (datetime, website, errors) VALUES (%s, %s, %s)"
     val = (today, site, errors)
 
