@@ -32,7 +32,7 @@ def printData(yml, sitelink):
         # Download another page of similar structure
         r = requests.get(sitelink, timeout=17)
         #r = requests.get(sitelink)
-        #r = requests.get('https://www.naylors.com/')
+        #r = requests.get('https://equineessentialsdirect.co.uk/women/footwear/half-chaps/')
         # Use the same extractor to get the data
         #print("requests recieved")
         data = e.extract(r.text)
@@ -72,7 +72,7 @@ def printData(yml, sitelink):
                     newRow = clean_up(site, newRow)
 
                     #print(newRow)
-                    insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], site)
+                    #insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], site)
                 except IndexError:
                     print("product incomplete")
                     addError(site)
@@ -83,4 +83,4 @@ def printData(yml, sitelink):
         session.close()
 
 
-#printData("hi")
+#printData("equine_essentials_direct.yml", "https://equineessentialsdirect.co.uk/women/footwear/half-chaps/")

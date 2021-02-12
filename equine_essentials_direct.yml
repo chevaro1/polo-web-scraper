@@ -17,6 +17,7 @@ product:
             xpath: null
             type: Link
         image:
-            css: 'span.card-image-wrapper:nth-of-type(2) img.card-image'
+            css: img
             xpath: null
-            type: Image
+            type: Attribute
+            attribute: data-src

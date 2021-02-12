@@ -124,7 +124,7 @@ prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["bum bag"
               "chaps": [],
               "headcollar": [["lead", 3], ["rawhide", 4], ["headcollar", 3], ["head collar", 3]],
               "mallet": [["foot maallet", 3], ["foot stick", 3]],
-              "trousers_accessories": [["clips", 3]],
+              "trousers_accessories": [["clips", 4]],
               "trousers": [["polo", 4], ["jodhpur", 2], ["underbreeches", 3], ["tights", 2], ["breeches", 3], ["whites", 3], ["jeans", 3]],
               "socks": [],
               "bandages": [["tape", 3], ["vet flex", 3]],

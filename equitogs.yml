@@ -13,7 +13,7 @@ product:
             xpath: null
             type: Text
         product_link:
-            css: a
+            css: 'figure > a'
             xpath: null
             type: Link
         image:

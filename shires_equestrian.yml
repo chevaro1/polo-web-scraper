@@ -20,4 +20,4 @@ product:
             css: img
             xpath: null
             type: Attribute
-            attribute: data-src
+            attribute: src

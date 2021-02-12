@@ -132,7 +132,7 @@ def launchsite(site):
     #yyml = "horze"
     #pool = Pool(processes=5, maxtasksperchild=1)
     pool = Pool(processes=5)
-    pool.starmap(scrape, links)
+    pool.starmap(scrape, links[16:17])
     pool.close()
     pool.terminate()
     pool.join()
@@ -151,5 +151,5 @@ def runscrape():
         print("launching site")
         launchsite(i)
     #break
-#launchsite("millbry_hill")
+#launchsite("oakfield_direct")
 #runscrape()

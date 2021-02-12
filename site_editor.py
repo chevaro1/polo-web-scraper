@@ -20,6 +20,7 @@ def add_prefix(prefix, suffix):
 def oakfield_direct(row):
     prefix = "https://www.oakfield-direct.co.uk/"
     row[7] = add_prefix(prefix, row[7])
+    row[0] = add_prefix(prefix, row[0])
     return row
 
 def the_saddlery_shop(row):
