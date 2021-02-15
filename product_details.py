@@ -19,7 +19,7 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "bit": [["gag", 5], ["loose ring", 3], ["pelham", 5], ["bit", 3], ["bomber", 2], ["happy tongue", 5], ["eggbutt", 3], ["t bar", 3], ["Cosquejero", 5], ["snaffle", 3]],
               "clothes": [["t-shirt", 5], ["bomber jacket", 4], ["bracelet", 5], ["gilet", 5], ["belt", 3], ["alpargata", 5], ["baseball cap", 4], ["cap", 1], ["ear ring", 4], ["earring", 4], ["pendant", 4], ["key ring", 4], ["charm", 4], ["keyring", 4], ["sweater", 3]],
               "whip": [["whip", 3], ["crop", 3], ["baton", 4], ["bat ", 2]],
-              "helmet": [["helmet", 3], ["skull", 1], ["young rider", 3], ["headband", 2], ["skull hat", 3], ["your instinct", 4], ["face guard", 3], ["Polo Headband", 3], ["faceguard", 3], ["riding hat", 4]],
+              "helmet": [["helmet", 3], ["ayrbrush", 4], ["ayr brush", 4], ["skull", 1], ["young rider", 3], ["headband", 2], ["skull hat", 3], ["your instinct", 4], ["face guard", 3], ["Polo Headband", 3], ["faceguard", 3], ["riding hat", 4]],
               "saddle": [["saddle", 1], ["bareback riding", 3], ["bates", 3], ["saddle cover", 3], ["Saddle rack", 3], ["saddle soap", 3]],
               "numnah": [["saddle cloth", 3], ["saddlecloth", 3], ["saddle blanket", 3], ["gel saddle pad", 3], ["saddle pad", 3], ["numnah", 4], ["saddlepad", 3], ["saddle cloth", 3]],
               "glasses": [["glasses", 5], ["oculi", 3], ["goggles", 5], ["lens", 5], ["BluEye", 3], ["eyeshield", 3], ["oakley", 3]],
@@ -34,12 +34,12 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "limb_supports":[["elbow support", 3], ["shoulder protector", 3], ["elbow guard", 3], ["knee support", 3], ["ankle support", 3], ["wrist support", 3], ["wrist wrap", 3], ["wrist compression wrap", 3], ["back support", 3], ["elbow pad", 3]],
               "studs":[["stud", 3]],
               "hoof_oil":[["hoof oil", 3], ["Kevin Bacon", 4], ["Effol", 3]],
-              "rug":[["Summer Sheets", 3], ["weatherbeeta", 3], ["turnout rug", 3], ["00d", 2], ["00g", 2], ["rug", 1]],
+              "rug":[["Summer Sheets", 3], ["weatherbeeta", 3], ["turnout rug", 3], ["00d", 2], ["00g", 2], ["rug", 2], ["shires tempest", 3], ["combo fly rug", 3], ["fly rug", 3], ["combo rug", 3], ["turnout", 3]],
               "show_jacket":[["show jacket", 4]],
               "masks": [["face mask", 4], ["mask", 2], ["face covering", 4]],
               "neck_wear": [["scrunchie", 4], ["stock", 1], ["show tie", 4], ["tie", 2]],
               "wellington_boots": [["wellington boot", 4], ["wellington", 3], ["wellies", 3]],
-              "grooming_kit": [["grooming box", 3], ["tack box", 3], ["groom", 1], ["brush", 2], ["curry comb", 3], ["grooming kit", 5], ["grooming bag", 5], ["grooming", 2], ["comb", 2]],
+              "grooming_kit": [["grooming box", 3], ["tack box", 3], ["groom", 1], ["brush", 2], ["curry comb", 3], ["grooming kit", 5], ["grooming bag", 5], ["grooming", 2], ["comb", 1]],
               "muzzle": [["muzzle", 3]],
               "body_protector": [["body protector", 4]],
               "wheelbarrow": [["wheelbarrow", 3], ["barrow", 3]],
@@ -52,7 +52,7 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "plaiting":[["plaiting", 4], ["plait", 3]],
               "dog": [["dog", 5], ["tennis ball", 3], ["ball", 2]],
               "show_shirt": [["show shirt", 3]],
-              "jacket": [["jacket", 1]],
+              "jacket": [["jacket", 1], ["tweed jacket", 3]],
               "herbs": [["herbs", 1]],
               "hat": [["hat", 1]],
               "coat": [["coat", 1]],
@@ -83,7 +83,7 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "buckets": [["bucket", 1], ["tubtrug", 4]],
               "manger": [["manger", 3]],
               "mounting block": [["mounting block", 3]],
-              "treats": [["treats", 2], ["treat bar", 4], ["bizzy bites", 4]],
+              "treats": [["treats", 2], ["treat bar", 4], ["bizzy bites", 4], ["stud muffin", 4]],
               "toys": [["toy", 1]],
               "bin": [["bin ", 1]],
               "fencing": [["battery", 3]],
@@ -104,7 +104,7 @@ brands = [["casablanca", 5], ["ona", 1], ["charles owen", 5], ["armis", 5], ["in
          ["cavallo", 3], ["pikeur", 5], ["dublin", 3], ["noble balance", 3], ["Montar Madelyn", 5], ["roeckl", 3], ["dubarry", 4],
          ["mountain horse", 3], ["fairfax & favor", 4], ["tattini", 3], ["veredus", 4], ["aigle", 3], ["neue schule", 3], ["joules", 3],
          ["fyna lite", 3], ["fyna-lite", 3], ["fynalite", 3], ["tubtrug", 4], ["schokemohle", 3], ["kavalkade", 3], ["zandona", 3],
-         ["fairfax", 3], ["mark todd", 3], ["prolite", 3], ["kiefer", 3]]
+         ["fairfax", 3], ["mark todd", 3], ["prolite", 3], ["kiefer", 3], ["lincon", 3]]
 
 
 prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["duffle bag", 4], ["holdall", 4], ["hold all", 4], ["weekend", 4], ["bum bag", 4], ["stable bag", 4], ["garment bag", 4], ["ring bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
@@ -131,6 +131,7 @@ prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["duffle b
               "socks": [],
               "bandages": [["tape", 3], ["tail bandage", 4], ["vet flex", 3], ["orthopaedic", 3], ["sportwrap", 3], ["cohesive", 4], ["body bandage", 3], ["bandage pad", 3], ["liner", 3], ["polo", 4]],
               "spurs": [],
+              "grooming_kit": [["mane comb", 2], ["grooming kit", 3], ["grooming bag", 3], ["tack box", 3], ["grooming box", 3], ["curry comb", 3], ["tournament bag", 3], ["grooming block", 3], ["tail brush", 3], ["burcket brush", 3], ["microfibre", 3], ["face brush", 3], ["grooming mitt", 3], ["hoof brush", 3], ["dandy brush", 3], ["razors", 3], ["Detangler brush", 3], ["sweat scraper", 3]],
               "kneepad": [["kneepad", 1], ["knee pad", 1]],
               "kneepad_accessories":[["velcro strap", 3], ["velcro strap", 3], ["replacement", 3], ["kneepad straps", 3]],
               "limb_supports": [["elbow", 3], ["knee", 3], ["ankle", 3], ["wrist", 3], ["back", 2]],
@@ -145,7 +146,7 @@ prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["duffle b
 gend = [["men", " man", 3], ["men", " men", 3], ["men", " male", 3], ["women", "woman", 3], ["women", "women", 3], ["women", "female", 3], ["women", "ladies", 3], ["women", "lady", 3],["child", "child", 4], ["child", "kid", 4], ["child", "junior", 4], ["child","baby", 4]]
 
 
-colour_list = [" red", "yellow", "pistachio", "berry", "plum", "purple", "mint", "rainbow", "floral", "pink", "ocean", "green", "blue", "navy", "brown", "black", "white", "grey", "rose", "quartz", "orange", "turquiose", "aqua", "camoflauge", "gold"]
+colour_list = [" red", "yellow", "pistachio", "berry", "burgundy", "plum", "purple", "mint", "rainbow", "floral", "pink", "ocean", "green", "blue", "navy", "brown", "black", "white", "grey", "rose", "quartz", "orange", "turquiose", "aqua", "camoflauge", "gold"]
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
