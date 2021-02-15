@@ -1,5 +1,5 @@
 product:
-    css: 'div.item clearfix'
+    css: 'div.clearfix'
     xpath: null
     multiple: true
     type: Text
@@ -17,6 +17,6 @@ product:
             xpath: null
             type: Link
         image:
-            css: img.thumb
+            css: img
             xpath: null
             type: Image

@@ -34,6 +34,6 @@ with open(filename) as fh:
 #with open('result1.json', 'w', encoding='utf-8') as f:
 #    json.dump(res, f, ensure_ascii=False, indent=4)
 
-out_file = open("equus.json", "w")
+out_file = open("robinsons_equestrian.json", "w")
 json.dump(res, out_file, indent = 4, sort_keys = False)
 out_file.close()

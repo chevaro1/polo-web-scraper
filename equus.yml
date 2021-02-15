@@ -17,6 +17,7 @@ product:
             xpath: null
             type: Link
         image:
-            css: img.lazyautosizes
+            css: img
             xpath: null
-            type: Image
+            type: Attribute
+            attribute: data-src

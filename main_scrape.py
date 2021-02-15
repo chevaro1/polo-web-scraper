@@ -95,12 +95,12 @@ def getScraper(site):
         #    scrape(i)
 
         #yyml = "horze"
-        pool = Pool(processes=5, maxtasksperchild=1)
+        pool = Pool(processes=5)
         pool.starmap(printData, links)
         pool.close()
         pool.terminate()
         pool.join()
-        gc.collect()
+
 
 def scrapeMain(res):
     length = len(res)

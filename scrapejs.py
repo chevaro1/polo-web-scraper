@@ -59,7 +59,7 @@ def scrape(yml, link):
         for x in dist:
           #print(dist[x])
           #print("hello there")
-          #print(x)
+          print(x)
           try:
               for a in dist[x]:
                   try:
@@ -68,10 +68,10 @@ def scrape(yml, link):
                     #print("\n" + "\n")
                     #print("\n" + "\n" + "inside: individual product" + "\n" + "\n")
                     newRow.append(a["image"])
-                    #print("name = " + a["name"])
-                    #print("price = " + a["price"])
-                    #print("product_link = " + a["product_link"])
-                    #print("image = " + a["image"])
+                    print("name = " + a["name"])
+                    print("price = " + a["price"])
+                    print("product_link = " + a["product_link"])
+                    print("image = " + a["image"])
                     name = a["name"].strip()
                     newRow.append(name)
                     result = (gettype(name))
@@ -132,7 +132,7 @@ def launchsite(site):
     #yyml = "horze"
     #pool = Pool(processes=5, maxtasksperchild=1)
     pool = Pool(processes=5)
-    pool.starmap(scrape, links[16:17])
+    pool.starmap(scrape, links)
     pool.close()
     pool.terminate()
     pool.join()
@@ -144,12 +144,13 @@ lil = ["millbry_hill",
        "equine_essentials_direct",
        "equi_supermarket",
        "equine_superstore",
-       "shires_equestrian"
+       "shires_equestrian",
+       "discount_equestrian"
        ]
 def runscrape():
     for i in lil:
         print("launching site")
         launchsite(i)
     #break
-#launchsite("oakfield_direct")
+#launchsite("shires_equestrian")
 #runscrape()

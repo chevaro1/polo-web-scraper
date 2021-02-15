@@ -1,4 +1,4 @@
-
+import re
 # LINK = 7
 # IMAGE = 0
 
@@ -16,6 +16,13 @@ def clean_up(site, row):
 def add_prefix(prefix, suffix):
     return prefix + suffix
 
+def equus(row):
+    prefix = "https://www.equus.co.uk"
+    prefix2 = "https:"
+    row[7] = add_prefix(prefix, row[7])
+    row[0] = add_prefix(prefix2, row[0])
+    row[0] = re.sub("_{width}x", "", row[0])
+    return row
 
 def oakfield_direct(row):
     prefix = "https://www.oakfield-direct.co.uk/"
