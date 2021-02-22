@@ -43,7 +43,7 @@ def scrape(yml, link):
         # Download another page of similar structure
         r = session.get(link, timeout=17)
         #r = session.get("https://www.millbryhill.co.uk/global-herbs-m1", timeout=17)
-        r.html.render(retries=3, wait=5, timeout=20)
+        r.html.render(retries=3, wait=5, timeout=25)
         #r.html.render(wait=5)
         #r = requests.get(sitelink)
         #r = requests.get('https://www.naylors.com/')
@@ -84,6 +84,7 @@ def scrape(yml, link):
                     price = "n/a"
                     price = a["price"].strip()
                     newRow.append(getPrice(price))
+                    #print(newRow)
                     newRow = clean_up(site, newRow)
 
                     #print(newRow)
@@ -145,12 +146,14 @@ lil = ["millbry_hill",
        "equi_supermarket",
        "equine_superstore",
        "shires_equestrian",
-       "discount_equestrian"
+       "discount_equestrian",
+       "gs_equestrian"
        ]
 def runscrape():
     for i in lil:
         print("launching site")
         launchsite(i)
     #break
-#launchsite("shires_equestrian")
+#launchsite("gs_equestrian")
 #runscrape()
+#scrape("gs_equestrian.yml", "https://gsequestrian.co.uk/collections/horseware-ireland")

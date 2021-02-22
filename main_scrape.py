@@ -128,5 +128,6 @@ def scrapeSingle(res):
             print("website failed")
         count += 1
 
-#res = ["naylors"]
-#scrapeMain(res)
+
+#res = ["gs_equestrian"]
+#crapeMain(res)

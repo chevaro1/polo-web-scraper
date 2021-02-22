@@ -70,3 +70,10 @@ def equiport(row):
     prefix = "https://www.equiport.co.uk"
     row[7] = add_prefix(prefix, row[7])
     return row
+
+def gs_equestrian(row):
+    prefix = "https:"
+    row[0] = add_prefix(prefix, row[0])
+    prefix = "https://gsequestrian.co.uk"
+    row[7] = add_prefix(prefix, row[7])
+    return row

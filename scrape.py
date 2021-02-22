@@ -83,4 +83,4 @@ def printData(yml, sitelink):
         session.close()
 
 
-#printData("robinsons_equestrian.yml", "https://www.robinsonsequestrian.com/shop/type/reins")
+#printData("gs_equestrian.yml", "https://gsequestrian.co.uk/collections/lemieux")
