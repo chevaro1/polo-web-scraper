@@ -6,6 +6,7 @@ from main_scraper import scrapeMain
 from delete_duplicate import deleteDup
 import timeit
 import datetime
+from scrapejs import runscrape
 #if no sys argument just run the whole program, this is for the automated system to running
 # option "1" sets the number of processes to be used by the program
 # option "2" if present will open up the the otions menu
@@ -127,8 +128,7 @@ def runJs():
     res = []
     res.append(js_sites[int(site)])
     start = timeit.default_timer()
-    print("js launch method not added yet")
-    #scrapeMain(res, processes)
+    runscrape(res, processes)
     stop = timeit.default_timer()
     print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
 
@@ -150,8 +150,8 @@ def runAllNonJs():
 def runAllJs():
     clearScreen()
     start = timeit.default_timer()
-    scrapeMain(sites, processes)
-    print("js launch method not added yet")
+    runscrape(js_sites, processes)
+    stop = timeit.default_timer()
     print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
 
 
@@ -195,7 +195,15 @@ def menuHome():
     print("loading... (NOTHING THERE CURRENTLY)")
     runOption(option)
 
+def fullScrape():
+    print("Web scraper started")
+    truncate()
 
+    scrapeMain(sites, processes)
+    runscrape(js_sites, processes)
+
+    print("deleting duplicates")
+    deleteDup()
 
 
 if len(sys.argv) < 2:
@@ -210,13 +218,8 @@ processes = int(sys.argv[1])
 if len(sys.argv) > 2:
     menuHome()
 else:
-    print("Web scraper started")
-    truncate()
+    fullScrape()
 
-    scrapeMain(sites, processes)
-
-    print("deleting duplicates")
-    deleteDup()
 
 
 

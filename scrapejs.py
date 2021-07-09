@@ -9,7 +9,6 @@ from get_price import getPrice
 from errors import addError
 from site_editor import clean_up
 #from site_editor_next_page import get_next
-from main import processes
 #import re
 
 
@@ -108,9 +107,9 @@ def scrape(yml, link):
 
 
 
-def launchsite(site):
+def launchsite(site, processes):
     #site = "horze"
-    sitelink = site + ".json"
+    sitelink = "websites/" + site + "/" + site + ".json"
     links = []
 
     here = os.path.dirname(os.path.abspath(__file__))
@@ -122,7 +121,7 @@ def launchsite(site):
 
     for key in data:
         temp = []
-        temp.append(site + ".yml")
+        temp.append("websites/" + site + "/" + site + ".yml")
         temp.append(key["link"])
         links.append(temp)
 
@@ -150,10 +149,10 @@ lil = ["millbry_hill",
        "discount_equestrian",
        "gs_equestrian"
        ]
-def runscrape(sites):
+def runscrape(sites, processes):
     for i in sites:
         print("launching site")
-        launchsite(i)
+        launchsite(i, processes)
     #break
 #launchsite("gs_equestrian")
 #runscrape()

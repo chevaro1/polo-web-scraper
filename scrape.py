@@ -27,7 +27,7 @@ def printData(yml, sitelink):
         #r = requests.get('https://www.naylors.com/women/country')
         #r = requests.get(file)
 
-        #print("web page = " + sitelink)
+        print("web page = " + sitelink)
         # Pass the HTML of the page and create
         #data = e.extract(r.text)
         # Print the data
@@ -57,7 +57,7 @@ def printData(yml, sitelink):
                     #print("\n" + "\n")
                 #    print("\n" + "\n" + "inside: individual product" + "\n" + "\n")
                     newRow.append(a["image"])
-                    #print("name = " + a["name"])
+                    print("name = " + a["name"])
                     #print("price = " + a["price"])
                     #print("product_link = " + a["product_link"])
                     #print("image = " + a["image"])
