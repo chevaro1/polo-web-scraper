@@ -1,68 +1,237 @@
-from sats_polo import SatsPolo
-from rj_polo import RJPolo
-from tally_ho import TallyHo
-from casablanca import Casablanca
-from polo_splice import poloSplice
-from porto_polo import PortoPolo
-from la_martina import LaMartina
-from world_wide_tack import WorldWideTack
-from the_polo_shop import thePoloShop
-from delete_duplicate import deleteDup
-from roxtons import roxtons
-from ona_polo import onaPolo
-from performance_polo import PerformancePolo
-from willoughby_park import WilloughbyPark
-from krono_polo import KronoPolo
+import sys
+import os
+import time
 from truncate_db import truncate
-from get_active import get_active
-from errors import saveErrorLog
-from main_scrape import scrapeMain
-from scrapejs import runscrape
+from main_scraper import scrapeMain
+from delete_duplicate import deleteDup
+import timeit
+import datetime
+#if no sys argument just run the whole program, this is for the automated system to running
+# option "1" sets the number of processes to be used by the program
+# option "2" if present will open up the the otions menu
+# in options menu have the following
 
-print("Application running")
-truncate()
-print("database cleared")
+sites = ["naylors",
+        #"discount_equestrian",
+        "equine_superstore",
+        "equus",
+        "hope_valley_saddlery",
+        #"horze",
+        "online_for_equine",
+        "redpost_equestrian",
+        "robinsons_equestrian",
+        "the_saddlery_shop",
+        "ayr_equestrian",
+        "derby_house_store",
+        "equestrian_world",
+        "equiport",
+        #"houghton_country",      #cant seem to load all of the js  lazy loader problem scrapy-splash
+        "ingatestone_saddlery",    # fixed
+        "kramer",                  #need actual valid links otherwise working
+        #"millbry_hill",              #lazy loader problem scrapy-splash
+        "randr_country",             # fixed
+        "royal_equestrian",
+        #"shires_equestrian",
+        "imperial_equestrian",
+        #"equine_essentials_direct",
+        "robinsons_equestrian_uk",
+        "fast_tack_direct",
+        "tack_shop",
+        "dragonfly_saddlery",
+        #"equi_supermarket",
+        "edgemere",
+        "church_equestrian",
+        "equiporium",
+        "old_dairy_saddlery",
+        "griggs_equestrian",
+        "the_yard_equine",
+        "the_ranch_store",
+        "all_your_horse_needs",
+        "throstlenest_saddlery",
+        "just_equine",
+        "rb_equestrian",
+        "avily",
+        "barnstaple_equestrian_supplies",
+        "brendon_saddlery",
+        "complete_equestrian",
+        "cool_equestrian",
+        "cork_farm_equestrian",
+        "dash_equestrian",
+        "denchworth_equestrian",
+        "elite_saddlery",
+        "equine_mania",
+        "equitogs",
+        "gilberts_equestrian",
+        "hendry_equestrian_shop",
+        "horse_and_rider",
+        "just_horse_riders",
+        "milton_equestrian",
+        #"oakfield_direct",
+        "retford_saddlery",
+        "saddlesdane",
+        "smeeth_saddlery",
+        "speedgate",
+        "the_paddock_pantry",
+        "wadswick"
+        ]
 
-res = get_active()
-print(res)
-for x in res:
-    try:
-        run = globals()[x]
-        run()
-        res.remove(x)
-    except:
-        print("invalid website")
+js_sites = ["millbry_hill",
+           "horze",
+           "oakfield_direct",
+           "equine_essentials_direct",
+           "equi_supermarket",
+           "equine_superstore",
+           "shires_equestrian",
+           "discount_equestrian",
+           "gs_equestrian"
+           ]
 
+def clearScreen():
+    os.system('cls' if os.name=='nt' else 'clear')
 
-scrapeMain(res)
-runscrape()
-
-#SatsPolo()
-#RJPolo()
-#TallyHo()
-#Casablanca()
-#poloSplice()
-#PortoPolo()
-#LaMartina()
-#WorldWideTack()
-#thePoloShop()
-#roxtons()
-#onaPolo()
-#PerformancePolo() THIS DOES NOT WORK, KEEP COMMENTED OUT
-#WilloughbyPark()
-#KronoPolo()
-
-
-print("deleting duplicates")
-deleteDup()
-
-print("saving error log")
-saveErrorLog()
-
-print("application complete")
+def runNonJs():
+    clearScreen()
+    print("please choose the website you would like to run:")
+    count = 0
+    while count < len(sites):
+        print(str(count) + " for: " + str(sites[count]))
+        count += 1
+    site = input("Enter option: ")
+    if site.isnumeric() != True and int(site) < len(sites):
+        print("no option available with this value, try again..")
+        time.sleep(1)
+        runNonJs()
+        return
+    res = []
+    res.append(sites[int(site)])
+    start = timeit.default_timer()
+    scrapeMain(res, processes)
+    stop = timeit.default_timer()
+    print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
 
 
 
-# to do list
-# performance polo : https://www.performance-polo.com/shop DOESNT WORK
-# hurlingham polo : www.hurlinghampolo1875.com NOT WORTH IT
+def runJs():
+    clearScreen()
+    print("please choose the website you would like to run:")
+    count = 0
+    while count < len(js_sites):
+        print(str(count) + " for: " + str(js_sites[count]))
+        count += 1
+    site = input("Enter option: ")
+    if site.isnumeric() != True and int(site) < len(js_sites):
+        print("no option available with this value, try again..")
+        time.sleep(1)
+        runNonJs()
+        return
+    res = []
+    res.append(js_sites[int(site)])
+    start = timeit.default_timer()
+    print("js launch method not added yet")
+    #scrapeMain(res, processes)
+    stop = timeit.default_timer()
+    print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
+
+def sitemap():
+    clearScreen()
+    print("This function is a work in progress try again later")
+
+def truncateTable():
+    clearScreen()
+    truncate()
+
+def runAllNonJs():
+    clearScreen()
+    start = timeit.default_timer()
+    scrapeMain(sites, processes)
+    stop = timeit.default_timer()
+    print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
+
+def runAllJs():
+    clearScreen()
+    start = timeit.default_timer()
+    scrapeMain(sites, processes)
+    print("js launch method not added yet")
+    print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
+
+
+
+def runOption(no):
+    print("option = " + no)
+    methodDict = {'0': runNonJs, '1': runJs, '2': sitemap, '3': truncateTable, '4': runAllNonJs, '5': runAllJs}
+    method = methodDict[no]
+    method()
+
+
+def menuHome():
+    clearScreen()
+    print("***********************************")
+    print("Welcome to the menu!")
+    print("***********************************")
+    print("Please type the number of the option you want:")
+    print("option 0: run a website in non JS mode")
+    print("option 1: run a website in JS mode")
+    print("option 2: parse sitemap (WIP)")
+    print("option 3: truncate products table")
+    print("option 4: run non js scraper")
+    print("option 5: run js scraper")
+    print("Or type 'esc' to exit")
+    option = ''
+    option = input("Enter option: ")
+    if option == "esc":
+        print("goodbye.")
+        sys.exit()
+    if option.isnumeric() != True:
+        print("no option available with this value, taking you home..")
+        time.sleep(1)
+        menuHome()
+        return
+    if int(option) > 5 :
+        print("no option available with this value, taking you home..")
+        time.sleep(1)
+        menuHome()
+        return
+    print("option " + option + " chosen")
+    print("loading... (NOTHING THERE CURRENTLY)")
+    runOption(option)
+
+
+
+
+if len(sys.argv) < 2:
+    print("At least 1 argument required: ")
+    print("arg 1 = number of processes to be run on")
+    print("arg 2 (optional) = settings menu launcher")
+    print("Quitting launcher...")
+    sys.exit()
+
+processes = int(sys.argv[1])
+
+if len(sys.argv) > 2:
+    menuHome()
+else:
+    print("Web scraper started")
+    truncate()
+
+    scrapeMain(sites, processes)
+
+    print("deleting duplicates")
+    deleteDup()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#

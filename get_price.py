@@ -29,9 +29,3 @@ def getPrice(price):
     except:
         print("attempt failed")
         return ("null")
-
-
-#vid = getPrice("£35.00 £25.00")
-#vid = getPrice("£ 22.50")
-#print(vid)
-#print("call out of function")

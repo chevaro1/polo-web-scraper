@@ -8,7 +8,7 @@
 
 
 categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["bag", 1], ["luggage", 4],
-              ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
+              ["kit bag", 4], ["bridle bag", 5], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4], ["tail bag", 5]],
               "boot": [["tendon boot", 3], ["magnetic chaps", 4], ["equi-chaps, close contact", 4], ["equi-chaps close contact", 4], ["close contact chaps", 4], ["stable chaps", 3], ["hardy chaps", 3], ["support boot", 3], ["ice boot", 3], ["magnetic boot", 3], ["therapeutic support boot", 3], ["aero magneto", 3], ["ice vibe", 4], ["ice-vibe", 4], ["magnetik", 3], ["hock boot", 3], ["dressage boot", 4], ["splint boot", 3], ["hoof boot", 3], ["front boot", 3], ["reach boot", 3], ["horse boot", 3], ["travel boot", 3], ["travelling boot", 3], ["hing boot", 3], ["poultice boot", 3], ["ballistic", 4], ["over reach", 3], ["tendon", 3], ["Racing Tack replacement straps", 4], ["sport boot", 3], ["freeze boot", 3], ["therapy boot", 3], ["magno boot", 3], ["veredus", 3], ["kentucky horsewear", 4], ["christ boot", 3], ["stable boot", 3], ["skid boot", 3], ["sports boot", 2], ["sports medicine boot", 4], ["bell boot", 4], ["fetlock boot", 3], ["jump boot", 3], ["brushing boot", 3], ["overreach boot", 3], ["fetlock ring", 2]],
               "poloboot": [["riding boot", 3], ["ariat barn", 4], ["country boots", 3], ["twin gore", 3], ["polo boot", 2], ["layer boots", 2], ["boot", 1], ["jodhpur boot", 4]],
               "ball": [["jolly ball", 3], ["horse playball", 3], ["kong", 3], ["snak-a-ball", 4], ["hay ball", 3], ["hayball", 3], ["wash ball", 3], ["feeder ball", 3], ["ball feeder", 3], ["treat ball", 3], ["hangin' ball", 4], ["equine play ball", 4], ["carrot ball", 3]],
@@ -38,12 +38,12 @@ categories = {"bag": [["boot bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mall
               "show_jacket":[["show jacket", 4]],
               "masks": [["face mask", 4], ["mask", 2], ["face covering", 4]],
               "neck_wear": [["scrunchie", 4], ["stock", 1], ["show tie", 4], ["tie", 2], ["Spur Of The Moment Unisex Silk Tie", 4]],
-              "wellington_boots": [["wellington boot", 4], ["wellington", 3], ["wellies", 3]],
+              "wellington_boots": [["wellington boot", 4], ["wellington", 3], ["wellies", 3], ["Le Chameau", 4]],
               "grooming_kit": [["grooming box", 3], ["tack box", 3], ["groom", 1], ["brush", 2], ["curry comb", 3], ["grooming kit", 5], ["grooming bag", 5], ["grooming", 2], ["comb", 1]],
               "muzzle": [["muzzle", 3]],
               "body_protector": [["body protector", 4], ["back protector", 4], ["Airowear ayrps", 5]],
               "wheelbarrow": [["wheelbarrow", 3], ["barrow", 3]],
-              "haynets": [["haynet", 3], ["hay net", 3], ["hay bag", 5], ["haylage net", 3]],
+              "haynets": [["haynet", 3], ["hay net", 3], ["hay bag", 5], ["haylage net", 3], ["hay tidy bag", 5], ["haybag", 4]],
               "base_layer": [["base layer", 3], ["base layer", 3], ["baselayer", 3]],
               "polo_shirt": [["polo shirt", 2]],
               "naf": [["naf", 1]],
@@ -115,7 +115,7 @@ brands = [["casablanca", 5], ["ona", 1], ["charles owen", 5], ["armis", 5], ["in
          ["christ ", 1], ["ezi-groom", 3], ["eqckusive", 3]]
 
 
-prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["duffle bag", 4], ["holdall", 4], ["hold all", 4], ["weekend", 4], ["bum bag", 4], ["stable bag", 4], ["garment bag", 4], ["ring bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
+prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["tail guard", 4], ["duffle bag", 4], ["holdall", 4], ["hold all", 4], ["weekend", 4], ["bum bag", 4], ["stable bag", 4], ["garment bag", 4], ["ring bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
               "boot": [["tendon boot", 4], ["over reach", 3], ["travel boot", 4], ["skid boot", 3], ["sports boot", 3], ["bell boot", 3], ["overreach", 3], ["brushing boot", 3], ["fetlock boot", 3], ["medicine boot", 3]],
               "poloboot": [["country boot", 4], ["carlow", 3], ["kendal", 3], ["carlton", 3], ["groundbreaker", 3], ["muck boot", 3], ["river boot", 3], ["kennet", 3], ["windermere", 3], ["canyon", 3], ["eskimo", 3], ["burford", 3], ["skyline", 3], ["river grain", 3], ["burford", 3], ["abbey", 3], ["eskdale", 3], ["polo boot", 3], ["kensington", 3], ["vermont", 3], ["chelsea", 3], ["gradmere", 3], ["contour", 2], ["ketley", 3], ["aurora", 3], ["heritage", 2], ["galway", 4], ["belford", 3], ["regina", 3], ["berwick", 3], ["riding boot", 3], ["coniston", 4], ["paddock boot", 3], ["moretta", 3], ["waterproof", 1], ["skyline", 3], ["terrain", 3], ["telluride", 3], ["wexford", 3], ["wythburn", 3], ["bromont", 3], ["pinnacle", 3]],
               "poloboot_accessories": [["boot jack", 3], ["boot mat", 3], ["boot tassels", 3], ["boot pulls", 3],["laces", 3], ["tree", 3], ["polish", 3], ["spray", 1], ["boot clip", 3], ["liner", 3], ["boot tab", 4], ["buckle pins", 3], ["replacement cable", 4], ["jack", 2]],
@@ -145,7 +145,7 @@ prodtype = {"bag": [["boot bag", 4], ["cooling", 4], ["tail bag", 4], ["duffle b
               "limb_supports": [["elbow", 3], ["knee", 3], ["ankle", 3], ["wrist", 3], ["back", 2]],
               "studs":[["tap", 3], ["stud", 1], ["brush", 3], ["stud holes", 3], ["stud spanner", 3]],
               "hoof_oil":[],
-              "rug":[["turnout", 3], ["comfitec", 3], ["rug rack", 5], ["green-tec", 3], ["show rug", 3], ["stable rug", 3], ["lightweight", 3], ["100g", 3], ["50g", 2], ["150g", 3], ["200g", 3], ["220g", 3], ["250g", 3], ["300g", 3], ["350g", 3], ["360g", 3], ["400g", 3], ["450g", 3], ["therapy", 3], ["neck", 3]],
+              "rug":[["turnout", 3], ["comfitec", 1], ["fly", 4], ["fleece", 4], ["dry rug", 4], ["cooler", 4], ["bug rug", 4], ["rug rack", 5], ["green-tec", 3], ["show rug", 3], ["stable rug", 3], ["lightweight", 3], ["100g", 3], ["50g", 2], ["150g", 3], ["200g", 3], ["220g", 3], ["250g", 3], ["300g", 3], ["350g", 3], ["360g", 3], ["400g", 3], ["450g", 3], ["therapy", 3], ["neck", 3]],
               "tools": [["broom", 2], ["rake", 2], ["tidee", 3], ["fork", 2], ["shovel", 2], ["fork head", 3], ["broom head", 3], ["broom handle", 3], ["manure", 3], ["ragwort", 4], ["weeda fork", 4]],
               "plaiting":[["comb", 4], ["band", 3], ["thread", 2]],
               "ball": [["jolly ball", 3], ["horse playball", 3], ["kong", 3], ["snak-a-ball", 4], ["hay", 3], ["wash ball", 3], ["feeder", 3], ["treat ball", 3], ["hangin' ball", 4], ["equine play ball", 4], ["carrot", 3]]
@@ -196,7 +196,7 @@ def gettype(product):
         try:
             ptype = productname(product, cat)
         except:
-            print("CATEGORY NOT FOUND PROBABLE WEIGHTING IMBALANCE, NAME = " + product + "\n")
+            #print("CATEGORY NOT FOUND PROBABLE WEIGHTING IMBALANCE, NAME = " + product + "\n")
             ptype = "unknown"
     results.append(ptype)
 

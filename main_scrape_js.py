@@ -1,6 +1,6 @@
 import json
 import os
-from scrapejs import printDataJs
+from scrapejs import scrape
 
 
 
@@ -73,4 +73,6 @@ def scrapeSingle(res):
         count += 1
 
 #res = ["millbry_hill"]
-#scrapeMainJs()
+scrapeMainJs()
+
+#scrape("horze.yml", "https://www.horze.co.uk/horse-rugs?start=252")

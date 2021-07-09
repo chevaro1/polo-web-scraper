@@ -8,6 +8,8 @@ from product_details import gettype
 from get_price import getPrice
 from errors import addError
 from site_editor import clean_up
+#from site_editor_next_page import get_next
+from main import processes
 #import re
 
 
@@ -42,8 +44,9 @@ def scrape(yml, link):
         #print("sitelink = " + sitelink)
         # Download another page of similar structure
         r = session.get(link, timeout=17)
+        #print(r.text)
         #r = session.get("https://www.millbryhill.co.uk/global-herbs-m1", timeout=17)
-        r.html.render(retries=3, wait=5, timeout=25)
+        r.html.render(retries=3, wait=10, timeout=25)
         #r.html.render(wait=5)
         #r = requests.get(sitelink)
         #r = requests.get('https://www.naylors.com/')
@@ -68,10 +71,10 @@ def scrape(yml, link):
                     #print("\n" + "\n")
                     #print("\n" + "\n" + "inside: individual product" + "\n" + "\n")
                     newRow.append(a["image"])
-                    print("name = " + a["name"])
-                    print("price = " + a["price"])
-                    print("product_link = " + a["product_link"])
-                    print("image = " + a["image"])
+                    #print("name = " + a["name"])
+                    #print("price = " + a["price"])
+                    #print("product_link = " + a["product_link"])
+                    #print("image = " + a["image"])
                     name = a["name"].strip()
                     newRow.append(name)
                     result = (gettype(name))
@@ -94,10 +97,8 @@ def scrape(yml, link):
           except:
               print("no products in page " + link)
 
-        #if(site == "millbry_hill" & re.search("^page=[0-9]", link[-6:]) & link[-1:] != 3):
-        #    linkno = int(link[-1:]) + 1
-        #    newlink = link[-1:] + linkno
-        #    scrape(yml,newlink)
+        session.close()
+        #get_next(site, yml, link)
 
     except:
         print("couldnt load page")
@@ -132,7 +133,7 @@ def launchsite(site):
 
     #yyml = "horze"
     #pool = Pool(processes=5, maxtasksperchild=1)
-    pool = Pool(processes=5)
+    pool = Pool(processes=processes)
     pool.starmap(scrape, links)
     pool.close()
     pool.terminate()
@@ -149,11 +150,10 @@ lil = ["millbry_hill",
        "discount_equestrian",
        "gs_equestrian"
        ]
-def runscrape():
-    for i in lil:
+def runscrape(sites):
+    for i in sites:
         print("launching site")
         launchsite(i)
     #break
 #launchsite("gs_equestrian")
 #runscrape()
-#scrape("gs_equestrian.yml", "https://gsequestrian.co.uk/collections/horseware-ireland")
