@@ -196,6 +196,7 @@ def menuHome():
     runOption(option)
 
 def fullScrape():
+    start = timeit.default_timer()
     print("Web scraper started")
     truncate()
 
@@ -204,6 +205,8 @@ def fullScrape():
 
     print("deleting duplicates")
     deleteDup()
+    stop = timeit.default_timer()
+    print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
 
 
 if len(sys.argv) < 2:

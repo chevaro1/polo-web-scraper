@@ -2,6 +2,7 @@ from selectorlib import Extractor
 import requests
 import os
 from config import insertdb
+from config import inserthistorydb
 from product_details import gettype
 from get_price import getPrice
 from errors import addError
@@ -77,6 +78,7 @@ def printData(yml, sitelink):
 
                     #print(newRow)
                     insertdb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], site)
+                    inserthistorydb(newRow[0], newRow[7], newRow[1], newRow[2], newRow[3], newRow[4], newRow[5], newRow[6], newRow[8], site)
                 except IndexError:
                     print("product incomplete")
                     addError(site)
