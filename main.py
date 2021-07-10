@@ -7,84 +7,81 @@ from delete_duplicate import deleteDup
 import timeit
 import datetime
 from scrapejs import runscrape
+from send_message import startMessage
+from send_message import endMessage
+from send_message import errorMessage
+from config import insertHistoryDb
 #if no sys argument just run the whole program, this is for the automated system to running
 # option "1" sets the number of processes to be used by the program
 # option "2" if present will open up the the otions menu
 # in options menu have the following
 
 sites = ["naylors",
-        #"discount_equestrian",
-        "equine_superstore",
-        "equus",
-        "hope_valley_saddlery",
-        #"horze",
-        "online_for_equine",
-        "redpost_equestrian",
-        "robinsons_equestrian",
-        "the_saddlery_shop",
-        "ayr_equestrian",
-        "derby_house_store",
-        "equestrian_world",
-        "equiport",
-        #"houghton_country",      #cant seem to load all of the js  lazy loader problem scrapy-splash
-        "ingatestone_saddlery",    # fixed
-        "kramer",                  #need actual valid links otherwise working
-        #"millbry_hill",              #lazy loader problem scrapy-splash
-        "randr_country",             # fixed
-        "royal_equestrian",
-        #"shires_equestrian",
-        "imperial_equestrian",
-        #"equine_essentials_direct",
-        "robinsons_equestrian_uk",
-        "fast_tack_direct",
-        "tack_shop",
-        "dragonfly_saddlery",
-        #"equi_supermarket",
-        "edgemere",
-        "church_equestrian",
-        "equiporium",
-        "old_dairy_saddlery",
-        "griggs_equestrian",
-        "the_yard_equine",
-        "the_ranch_store",
-        "all_your_horse_needs",
-        "throstlenest_saddlery",
-        "just_equine",
-        "rb_equestrian",
-        "avily",
-        "barnstaple_equestrian_supplies",
-        "brendon_saddlery",
-        "complete_equestrian",
-        "cool_equestrian",
-        "cork_farm_equestrian",
-        "dash_equestrian",
-        "denchworth_equestrian",
-        "elite_saddlery",
-        "equine_mania",
-        "equitogs",
-        "gilberts_equestrian",
-        "hendry_equestrian_shop",
-        "horse_and_rider",
-        "just_horse_riders",
-        "milton_equestrian",
-        #"oakfield_direct",
-        "retford_saddlery",
-        "saddlesdane",
-        "smeeth_saddlery",
-        "speedgate",
-        "the_paddock_pantry",
-        "wadswick"
+        #"equine_superstore",
+        #"equus",
+        #"hope_valley_saddlery",
+        #"online_for_equine",
+        #"redpost_equestrian",
+        #"robinsons_equestrian",
+        #"the_saddlery_shop",
+        #"ayr_equestrian",
+        #"derby_house_store",
+        #"equestrian_world",
+        #"equiport",
+        ##"houghton_country",      #cant seem to load all of the js  lazy loader problem scrapy-splash
+        #"ingatestone_saddlery",    # fixed
+        #"kramer",                  #need actual valid links otherwise working
+        #"randr_country",             # fixed
+        #"royal_equestrian",
+        #"imperial_equestrian",
+        #"robinsons_equestrian_uk",
+        #"fast_tack_direct",
+        #"tack_shop",
+        #"dragonfly_saddlery",
+        #"edgemere",
+        #"church_equestrian",
+        #"equiporium",
+        #"old_dairy_saddlery",
+        #"griggs_equestrian",
+        #"the_yard_equine",
+        #"the_ranch_store",
+        #"all_your_horse_needs",
+        #"throstlenest_saddlery",
+        #"just_equine",
+        #"rb_equestrian",
+        #"avily",
+        #"barnstaple_equestrian_supplies",
+        #"brendon_saddlery",
+        #"complete_equestrian",
+        #"cool_equestrian",
+        #"cork_farm_equestrian",
+        #"dash_equestrian",
+        #"denchworth_equestrian",
+        #"elite_saddlery",
+        #"equine_mania",
+        #"equitogs",
+        #"gilberts_equestrian",
+        #"hendry_equestrian_shop",
+        #"horse_and_rider",
+        #"just_horse_riders",
+        #"milton_equestrian",
+        #"retford_saddlery",
+        #"saddlesdane",
+        #"smeeth_saddlery",
+        #"speedgate",
+        #"the_paddock_pantry",
+        #"wadswick"
         ]
 
-js_sites = ["millbry_hill",
-           "horze",
-           "oakfield_direct",
-           "equine_essentials_direct",
-           "equi_supermarket",
-           "equine_superstore",
-           "shires_equestrian",
-           "discount_equestrian",
-           "gs_equestrian"
+js_sites = [#"millbry_hill",
+           #"horze",
+           #"oakfield_direct",
+           #"equine_essentials_direct",
+           #"equi_supermarket",
+           #"equine_superstore",
+           #"shires_equestrian",
+           #"discount_equestrian",
+           #"gs_equestrian"
            ]
 
 def clearScreen():
@@ -196,18 +193,26 @@ def menuHome():
     runOption(option)
 
 def fullScrape():
-    start = timeit.default_timer()
-    print("Web scraper started")
-    truncate()
+    try:
+        start = timeit.default_timer()
+        startMessage()
+        print("Web scraper started")
+        truncate()
 
-    scrapeMain(sites, processes)
-    runscrape(js_sites, processes)
+        scrapeMain(sites, processes)
+        runscrape(js_sites, processes)
 
-    print("deleting duplicates")
-    deleteDup()
-    stop = timeit.default_timer()
-    print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
-
+        print("deleting duplicates")
+        deleteDup()
+        stop = timeit.default_timer()
+        endMessage(str(datetime.timedelta(seconds=(stop - start))))
+        print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
+        insertHistoryDb()
+        os.system('sudo shutdown -h 5')
+    except:
+        print("Full scrape failed")
+        errorMessage()
+        os.system('sudo shutdown -h 5')
 
 if len(sys.argv) < 2:
     print("At least 1 argument required: ")
