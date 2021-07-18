@@ -20,5 +20,3 @@ def endMessage(time):
 def errorMessage():
     notify = Notify()
     notify.send("An error occureed during runtime, scrape failed")
-
-startMessage()

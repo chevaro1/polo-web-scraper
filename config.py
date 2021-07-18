@@ -59,7 +59,7 @@ def insertHistoryDb():
 
         mycursor = mydb.cursor()
 
-        sql = "INSERT INTO history SELECT *,  CURRENT_TIMESTAMP FROM products;"
+        sql = "INSERT INTO history SELECT null, date, img, link, name, brand, category, product, gender, colour, price, website, CURRENT_TIMESTAMP FROM products;"
 
         mycursor.execute(sql)
         mydb.commit()
@@ -67,3 +67,22 @@ def insertHistoryDb():
     except:
         print("record insertion failed")
         #print(mycursor._last_executed)
+
+
+def removeTableWebsite():
+    try:
+        mydb = mysql.connector.connect(
+            host="localhost",
+            user="global",
+            password="global2020",
+            database="polo"
+            )
+
+        mycursor = mydb.cursor()
+
+        sql = "DROP TABLE websites"
+
+        mycursor.execute(sql)
+        mydb.commit()
+    except:
+        print("Could not drop table")

@@ -29,6 +29,8 @@ def scrape(yml, link):
         e = Extractor.from_yaml_file(filename)
 
         site = yml[:-4]
+        site = site.rsplit('/', 1)
+        site = site[1]
         print("SITE = " + link)
 
         # Download the page using requests

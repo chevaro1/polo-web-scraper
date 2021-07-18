@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import sys
 import os
 import time
@@ -11,6 +12,7 @@ from send_message import startMessage
 from send_message import endMessage
 from send_message import errorMessage
 from config import insertHistoryDb
+from config import removeTableWebsite
 #if no sys argument just run the whole program, this is for the automated system to running
 # option "1" sets the number of processes to be used by the program
 # option "2" if present will open up the the otions menu
@@ -151,11 +153,27 @@ def runAllJs():
     stop = timeit.default_timer()
     print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
 
+def importWebsites():
+    removeTableWebsite()
+    os.system('ssh -p 2244 william@web.gnil.net "mysqldump -u william -pVUjH2tGs7nL6xy7x william websites --no-tablespaces | gzip -f9" > tmp.sql.gz')
+    os.system('gzip -df tmp.sql.gz')
+    os.system('mysql -u global -pglobal2020 polo < tmp.sql')
 
+def exportProductsTable():
+    os.system('mysqldump -u global -pglobal2020 polo products --no-tablespaces> /home/webscraper/export/products.sql')
+    os.system('ssh -p 2244 william@web.gnil.net "mysql -u william -pVUjH2tGs7nL6xy7x william" < /home/webscraper/export/products.sql')
+
+def testEndMessage():
+    start = timeit.default_timer()
+    time.sleep(5)
+    print("Please wait 5 seconds")
+    stop = timeit.default_timer()
+    endMessage(str(datetime.timedelta(seconds=(stop - start))))
+    print('Expected Output: ' + str(datetime.timedelta(seconds=(stop - start))))
 
 def runOption(no):
     print("option = " + no)
-    methodDict = {'0': runNonJs, '1': runJs, '2': sitemap, '3': truncateTable, '4': runAllNonJs, '5': runAllJs}
+    methodDict = {'0': runNonJs, '1': runJs, '2': sitemap, '3': truncateTable, '4': runAllNonJs, '5': runAllJs, '6': importWebsites, '7': exportProductsTable, '8': testEndMessage}
     method = methodDict[no]
     method()
 
@@ -172,6 +190,9 @@ def menuHome():
     print("option 3: truncate products table")
     print("option 4: run non js scraper")
     print("option 5: run js scraper")
+    print("option 6: import latest websites")
+    print("option 7: export products table to live server")
+    print("option 8: test finish message")
     print("Or type 'esc' to exit")
     option = ''
     option = input("Enter option: ")
@@ -183,7 +204,7 @@ def menuHome():
         time.sleep(1)
         menuHome()
         return
-    if int(option) > 5 :
+    if int(option) > 8 :
         print("no option available with this value, taking you home..")
         time.sleep(1)
         menuHome()
@@ -207,7 +228,9 @@ def fullScrape():
         stop = timeit.default_timer()
         endMessage(str(datetime.timedelta(seconds=(stop - start))))
         print('Time: ' + str(datetime.timedelta(seconds=(stop - start))))
+        time.sleep(5)
         insertHistoryDb()
+        exportProductsTable()
         os.system('sudo shutdown -h 5')
     except:
         print("Full scrape failed")
