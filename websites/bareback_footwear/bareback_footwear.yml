@@ -1,0 +1,23 @@
+product:
+    css: div.product-item
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: h3.title
+            xpath: null
+            type: Text
+        price:
+            css: span.money
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: div.product-item__bg__under
+            xpath: null
+            type: Attribute
+            attribute: style

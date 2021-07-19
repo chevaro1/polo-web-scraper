@@ -72,7 +72,14 @@ sites = ["naylors",
         "smeeth_saddlery",
         "speedgate",
         "the_paddock_pantry",
-        "wadswick"
+        "wadswick",
+        "bareback_footwear",
+        "brogini",
+        "charlies",
+        "chelford",
+        "chobham_rider",
+        "classic_dressage",
+        "colne_saddlery"
         ]
 
 js_sites = ["millbry_hill",

@@ -1,0 +1,22 @@
+product:
+    css: 'div.products-grid div.item'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: h3.product-name
+            xpath: null
+            type: Text
+        price:
+            css: div.price
+            xpath: null
+            type: Text
+        product_link:
+            css: 'h3.product-name a'
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image

@@ -1,0 +1,22 @@
+product:
+    css: div.product-item-info
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: a.product-item-link
+            xpath: null
+            type: Text
+        price:
+            css: span.price
+            xpath: null
+            type: Text
+        product_link:
+            css: a.product-item-link
+            xpath: null
+            type: Link
+        image:
+            css: img.product-image-photo
+            xpath: null
+            type: Image

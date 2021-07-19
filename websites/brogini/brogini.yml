@@ -1,0 +1,22 @@
+product:
+    css: 'div.tb_products > div'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: 'h4 a'
+            xpath: null
+            type: Text
+        price:
+            css: span.price-regular
+            xpath: null
+            type: Text
+        product_link:
+            css: 'h4 a'
+            xpath: null
+            type: Link
+        image:
+            css: 'div.image_hover img'
+            xpath: null
+            type: Image

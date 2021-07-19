@@ -1,0 +1,23 @@
+product:
+    css: div.block-inner-inner
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: div.title
+            xpath: null
+            type: Text
+        price:
+            css: 'span.price.non-rest-world span.theme-money:nth-of-type(1)'
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Attribute
+            attribute: data-srcset
