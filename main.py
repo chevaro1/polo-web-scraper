@@ -79,7 +79,12 @@ sites = ["naylors",
         "chelford",
         "chobham_rider",
         "classic_dressage",
-        "colne_saddlery"
+        "colne_saddlery",
+        "animed_direct",
+        "mole_online",
+        "pet_drugs_online",
+        "the_centre_line",
+        "vivendi_apparel"
         ]
 
 js_sites = ["millbry_hill",
