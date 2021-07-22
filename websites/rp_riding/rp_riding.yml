@@ -1,0 +1,23 @@
+product:
+    css: div.product-item
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: p.product-item__title
+            xpath: null
+            type: Text
+        price:
+            css: p.product-item__price-wrapper
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Attribute
+            attribute: data-srcset
