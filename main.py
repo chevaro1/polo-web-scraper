@@ -84,7 +84,20 @@ sites = ["naylors",
         "mole_online",
         "pet_drugs_online",
         "the_centre_line",
-        "vivendi_apparel"
+        "vivendi_apparel",
+        "the_comfy_horse_company",
+        "vetimed",
+        "vetuk",
+        "animed_direct",
+        "townfields",
+        "the_pharm_petco",
+        "supplement_solutions",
+        "wormers-direct",
+        "rp_riding",
+        "petcounter",
+        "paw_heads",
+        "nes_animal_health",
+        "murray_horse_care"
         ]
 
 js_sites = ["millbry_hill",
