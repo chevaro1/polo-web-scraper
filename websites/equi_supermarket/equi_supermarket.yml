@@ -1,22 +1,22 @@
 product:
-    css: div.productSmall
+    css: main.l-fullHeight-grow
     xpath: null
     multiple: true
     type: Text
     children:
         name:
-            css: a.productSmall-title
+            css: div.prodCard-titleTxt
             xpath: null
             type: Text
         price:
-            css: span.productSmall-priceNew
+            css: div.prodCard-price
             xpath: null
             type: Text
         product_link:
-            css: a
+            css: 'a.crumbs-crumb:last-of-type'
             xpath: null
             type: Link
         image:
-            css: img
+            css: 'div.gallery-tile img'
             xpath: null
             type: Image

@@ -1,5 +1,5 @@
 product:
-    css: 'div.collection-grid__wrapper div.grid__item'
+    css: 'div.new-grid div.grid-item'
     xpath: null
     multiple: true
     type: Text
@@ -13,11 +13,11 @@ product:
             xpath: null
             type: Text
         product_link:
-            css: 'a.grid-product__link '
+            css: a
             xpath: null
             type: Link
         image:
-            css: a.color-swatch
+            css: img
             xpath: null
             type: Attribute
-            attribute: data-variant-image
+            attribute: srcset

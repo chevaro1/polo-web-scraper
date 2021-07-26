@@ -9,7 +9,7 @@ import json
 # the file to be converted to
 # json format
 here = os.path.dirname(os.path.abspath(__file__))
-filename = os.path.join(here, 'dragonfly_saddlery.txt')
+filename = os.path.join(here, 'equi_supermarket.txt')
 #filename = 'horze.txt'
 
 # dictionary where the lines from
@@ -34,6 +34,6 @@ with open(filename) as fh:
 #with open('result1.json', 'w', encoding='utf-8') as f:
 #    json.dump(res, f, ensure_ascii=False, indent=4)
 
-out_file = open("dragonfly_saddlery.json", "w")
+out_file = open("equi_supermarket.json", "w")
 json.dump(res, out_file, indent = 4, sort_keys = False)
 out_file.close()

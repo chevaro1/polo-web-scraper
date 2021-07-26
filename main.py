@@ -97,6 +97,7 @@ sites = ["naylors",
         "petcounter",
         "paw_heads",
         "nes_animal_health",
+        "equi_supermarket",
         "murray_horse_care"
         ]
 
@@ -104,7 +105,6 @@ js_sites = ["millbry_hill",
            "horze",
            "oakfield_direct",
            "equine_essentials_direct",
-           "equi_supermarket",
            "equine_superstore",
            "shires_equestrian",
            "discount_equestrian",
