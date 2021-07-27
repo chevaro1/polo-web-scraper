@@ -9,7 +9,7 @@ product:
             xpath: null
             type: Text
         price:
-            css: 'ins bdi'
+            css: span.price
             xpath: null
             type: Text
         product_link:

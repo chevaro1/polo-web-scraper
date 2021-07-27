@@ -1,5 +1,5 @@
 product:
-    css: div.63
+    css: div.product-box
     xpath: null
     multiple: true
     type: Text

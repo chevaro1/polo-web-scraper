@@ -1,22 +1,22 @@
 product:
-    css: div.product-small.col
+    css: div.product-main
     xpath: null
     multiple: true
     type: Text
     children:
         name:
-            css: a.woocommerce-LoopProduct-link
+            css: h1.product-title
             xpath: null
             type: Text
         price:
-            css: span.price
+            css: p.price
             xpath: null
             type: Text
         product_link:
-            css: a.woocommerce-LoopProduct-link
+            css: 'a[href="#product-zoom"]'
             xpath: null
             type: Link
         image:
-            css: img.attachment-woocommerce_thumbnail
+            css: img
             xpath: null
             type: Image

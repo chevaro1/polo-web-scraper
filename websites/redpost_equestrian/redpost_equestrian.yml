@@ -13,6 +13,10 @@ product:
             xpath: null
             type: Text
         product_link:
-            css: a.col-1
+            css: a
             xpath: null
             type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image
