@@ -188,27 +188,7 @@ prodtype = {"bag": [["boot carrier", 4], ["boot bag", 4], ["cooling", 4], ["duff
 gend = [["men", " man", 3], ["men", " men", 3], ["men", " male", 3], ["women", "woman", 3], ["women", "women", 3], ["women", "female", 3], ["women", "ladies", 3], ["women", "lady", 3], ["child", "child", 4], ["child", "kid", 4], ["child", "junior", 4], ["child","baby", 4]]
 
 
-colour_list = {
-            "White": ["white"],
-            "Yellow": ["yellow", "mustard", "leopard"],
-            "Orange": ["orange", "clementine"],
-            "Red": ["red", "red fudge", "scarlet", "wine", "burgundy", "coral"],
-            "Pink": ["pink", "reg geranium", "magenta", "blossom", "raspberry", "berry", "rose"],
-            "Purple": ["purple", "aubergine", "oxblood", "fig", "grape", "lilac", "plum"],
-            "Blue": ["blue", "arctic print", "indigo", "denim", "navy","ocean"],
-            "Light Blue": ["cyan", "light blue", "lagoon", "tropical", "teal", "sky", "turquoise", "aqua"],
-            "Light Green": ["pistachio", "mint"],
-            "Green": ["green", "dark green", "olive", "jade"],
-            "Brown": ["brown", "chocolate", "cocoa"],
-            "Light Brown": ["tan", "beige", "khaki"],
-            "Ligh Grey": ["lime", "silver"],
-            "Grey": ["grey", "quartz"],
-            "Dark Grey": ["dark grey", "anthracite", "charcoal"],
-            "Black": ["black"],
-            "Hi-viz": ["hi viz", "neon"],
-            "Multi Colour": ["rainbow", "floral", "glitter", "camoflauge", "gold", " check", "arctic print"]
-}
-
+colour_list = ["aubergine", "tan", "dark green", "arctic print", "red geranium", "red fudge", "beige", "chocolate", "cocoa", "khaki", "cyan", "magenta", "scarlet", "light blue", "olive", "oxblood", "fig", "lagoon", "mustard", "clementine", "tropical", "anthracite", "indigo", "grape", "blossom", "denim", " check", "teal", "wine", "lime", "hi viz", "raspberry", "lilac", "charcoal", " red", "yellow", "pistachio", "berry", "jade", "sky", "leopard", "turquoise", "glitter", "neon", "silver", "burgundy", "coral", "plum", "purple", "mint", "rainbow", "floral", "pink", "ocean", "green", "blue", "navy", "brown", "black", "white", "grey", "rose", "quartz", "orange", "turquiose", "aqua", "camoflauge", "gold"]
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -448,7 +428,7 @@ def gender(product):
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #This is easy, what colour is the item
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-def colourOld(product):
+def colour(product):
     colours = ""
 
     for i in colour_list:
@@ -460,21 +440,9 @@ def colourOld(product):
 
     return colours
 
-def colour(product):
-    colour_string = ""
-    colour_array = []
 
-    for key in colour_list:
-        for i in colour_list[key]:
-            if i in product:
-                colour_array.append(key)
 
-    colour_array = list(dict.fromkeys(colour_array))
 
-    for i in colour_array:
-        colour_string = colour_string + i + ", "
-
-    return colour_string
 
 
 def change_cat(categ, add):
@@ -487,10 +455,12 @@ def change_cat(categ, add):
 
 
 
-word = "Weatherbeeta Kool Coat in Blue navy orange"
+#word = "YOUNG RIDER POLO HELMET LINER KID PINK blue green"
+word = "Weatherbeeta Kool Coat in Blue"
+#print(word)
 result = gettype(word)
 #print("brand = " + result[0])
 #print("category = " + result[1])
 #print("product type = " + result[2])
 #print("gender = " + result[3])
-print("colour = " + result[4])
+#print("colour = " + result[4])
