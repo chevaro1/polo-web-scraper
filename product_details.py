@@ -141,51 +141,62 @@ brands = [["stierna", 5], ["thermatex", 5], ["leoveties", 5], ["covalliero", 5],
          ["christ ", 1], ["ezi-groom", 3], ["eqckusive", 3]]
 
 
-prodtype = {"bag": [["boot carrier", 4], ["boot bag", 4], ["cooling", 4], ["duffle bag", 4], ["holdall", 4], ["hold all", 4], ["weekend", 4], ["bum bag", 4], ["stable bag", 4], ["garment bag", 4], ["ring bag", 4], ["hat bag", 4], ["helmet bag", 4], ["mallet bag", 4], ["saddle bag", 4], ["kit bag", 4], ["bridle bag", 4], ["stick bag", 4], ["tack bag", 4], ["bandage bag", 4]],
-              "horseboot": [["transport air boot", 3], ["eventer", 3], ["smart hind event", 3], ["smart event", 2], ["cavallo simple boot", 4], ["cavallo big foot boot", 4], ["cavallo entry level boot", 3], ["equilibrium tri-zone", 3], ["ultra mesh", 3], ["mesh hybrid", 3], ["mesh lite", 3], ["snug boot pro", 3], ["shoc air xc", 3], ["shoc xc", 3], ["carbon air xc", 4],  ["carbon xc", 3], ["xc elite", 3],  ["xc carbon", 3], ["boot slim sole", 3], ["joint relief", 3], ["easysoaker", 4], ["travel sure", 4], ["over reach", 3], ["overreach", 3], ["easyboot", 5], ["technik protective boot", 4], ["technik protective support boot", 4], ["medicine boot", 3]],
-              "horseboot_accessories": [["boot comfort pad", 4], ["scoot boot", 4], ["boot protection pad", 3], ["hoof pad", 3]],
-			  "poloboot": [["toddy zip", 4], ["country boot", 4], ["all weather boot", 4], ["all weather", 3], ["carlow", 3], ["kendal", 3], ["carlton", 3], ["groundbreaker", 3], ["muck boot", 3], ["river boot", 3], ["kennet", 3], ["windermere", 3], ["canyon", 3], ["eskimo", 3], ["burford", 3], ["skyline", 3], ["river grain", 3], ["burford", 3], ["abbey", 3], ["eskdale", 3], ["polo boot", 3], ["kensington", 3], ["vermont", 3], ["chelsea", 3], ["gradmere", 3], ["contour", 2], ["ketley", 3], ["aurora", 3], ["heritage", 2], ["galway", 4], ["belford", 3], ["regina", 3], ["berwick", 3], ["riding boot", 3], ["coniston", 4], ["    ", 3], ["moretta", 3], ["waterproof", 1], ["skyline", 3], ["terrain", 3], ["telluride", 3], ["wexford", 3], ["wythburn", 3], ["bromont", 3], ["pinnacle", 3]],
-              "poloboot_accessories": [["boot care kit", 3], ["boot stretcher", 4], ["konig boot cream", 4], ["boot shape holder", 4], ["boot scraper", 4], ["bootshaper", 4], ["boot sock", 4], ["boot shaper", 4], ["interchangeable boot top", 4], ["boot replacement closure", 4], ["qhp exchangeable top", 5], ["strap sleeve", 4], ["led boot safety heel clip", 4], ["boot pull", 3], ["boot jack", 3], ["boot mat", 3], ["boot tassels", 3], ["boot pulls", 3], ["laces", 3], ["tree", 3], ["polish", 3], ["spray", 1], ["boot clip", 3], ["liner", 3], ["boot tab", 4], ["buckle pins", 3], ["replacement cable", 4], ["jack", 2]],
-              "ball": [["arena", 3], ["grass", 3], ["snow", 3]],
-              "girth": [["sleeve", 4], ["guard", 3], ["extension",3], ["cover", 3], ["stud", 3], ["long", 2], ["short", 2], ["dressage", 4], ["sheepskin", 3], ["overgirth", 3], ["surcingle", 4]],
-              "glove": [["shooting glove", 3], ["yard glove", 3], ["technical gloves", 2], ["team roper", 4], ["all weather", 3], ["carbon pro", 4], ["speed", 3], ["pro tech", 4], ["franklin pro classic", 4]],
-              "bridle": [["martingale stops", 4], ["brow band", 3], ["breastplate cover", 4], ["nose band", 3], ["reins", 2], ["martingale", 3], ["drop noseband", 3], ["cheek pieces", 3], ["noseband", 2], ["breastplate", 3], ["running reins", 3], ["bridle", 3], ["split reins", 3], ["rein stop", 3], ["curb chain", 3], ["lead rein", 3], ["browband", 3]],
-              "bit": [["gag", 1], ["waterford", 4], ["barry gag", 3], ["snaffle", 2], ["balding", 3], ["pelham", 5], ["bomber", 2], ["eggbut", 4], ["d-ring", 4], ["happy tongue", 3], ["t bar", 3], ["bit guard", 3], ["golf label", 3]],
-              "clothes": [["waterproof", 3]],
-              "whip": [["lunging", 4], ["dressage", 3], ["schooling", 3], ["polo", 3], ["event bat", 3], ["jumping", 3]],
-              "helmet": [["shadowmatt", 5], ["ayr8", 8], ["palermo", 4], ["young rider", 4], ["palermo ii", 7], ["instinct", 1], ["skull", 1], ["samshield", 4], ["kep cromo", 4], ["kask star", 3], ["ventair", 3], ["vent-air", 3], ["salavita", 4]],
-              "helmet_accessories": [["band", 6], ["helmet lining insert", 5], ["ear warmers", 4], ["replacement liner", 5], ["helmet rack", 5], ["cosy helmet hat", 5], ["helmet deodoriser", 5], ["cleaner", 5], ["removable lining", 5], ["helmet lamp", 5], ["helmet light", 5], ["helmet cover", 5], ["hat cover", 5], ["skull cover", 5], ["helmet rack, 4"], ["head band", 6], ["headband", 6], ["sweatband", 6], ["liner", 6], ["peak", 3], ["face guard", 3], ["faceguard", 3]],
+prodtype = {"bag": [["boot carrier", "boot carrier", 4], ["boot bag", "boot bag", 4], ["cooling", "cooling", 4], ["duffle bag", "duffle bag", 4], ["holdall", "holdall", 4], ["hold all", "hold all", 4], ["weekend", "weekend", 4], ["bum bag", "bum bag", 4], ["stable bag", "stable bag", 4], ["garment bag", "garment bag", 4], ["ring bag", "ring bag", 4], ["hat bag", "hat bag", 4], ["helmet bag", "helmet bag", 4], ["mallet bag", "mallet bag", 4], ["saddle bag", "saddle bag", 4], ["kit bag", "kit bag", 4],
+              ["bridle bag", "bridle bag", 4], ["stick bag", "stick bag", 4], ["tack bag", "tack bag", 4], ["bandage bag", "bandage bag", 4]],
+              "horseboot": [["transport air boot", "transport air boot", 3], ["eventer", "eventer", 3], ["smart hind event", "smart hind event", 3], ["smart event", "smart event", 2], ["cavallo simple boot", "cavallo simple boot", 4], ["cavallo big foot boot", "cavallo big foot boot", 4], ["cavallo entry level boot", "cavallo entry level boot", 3], ["equilibrium tri-zone", "equilibrium tri-zone", 3], ["ultra mesh", "ultra mesh", 3], ["mesh hybrid", "mesh hybrid", 3], ["mesh lite", "mesh lite", 3],
+              ["snug boot pro", "snug boot pro", 3], ["shoc air xc", "shoc air xc", 3], ["shoc xc", "shoc xc", 3], ["carbon air xc", "carbon air xc", 4],  ["carbon xc", "carbon xc", 3], ["xc elite", "xc elite", 3],  ["xc carbon", "xc carbon", 3], ["boot slim sole", "boot slim sole", 3], ["joint relief", "joint relief", 3], ["easysoaker", "easysoaker", 4], ["travel sure", "travel sure", 4], ["over reach", "over reach", 3], ["overreach", "overreach", 3], ["easyboot", "easyboot", 5],
+              ["technik protective boot", "technik protective boot", 4], ["technik protective support boot", "technik protective support boot", 4], ["medicine boot", "medicine boot", 3]],
+              "horseboot_accessories": [["boot comfort pad", "boot comfort pad", 4], ["scoot boot", "scoot boot", 4], ["boot protection pad", "boot protection pad", 3], ["hoof pad", "hoof pad", 3]],
+			  "poloboot": [["toddy zip", "toddy zip", 4], ["country boot", "country boot", 4], ["all weather boot", "all weather boot", 4], ["all weather", "all weather", 3], ["carlow", "carlow", 3], ["kendal", "kendal", 3], ["carlton", "carlton", 3], ["groundbreaker", "groundbreaker", 3], ["muck boot", "muck boot", 3], ["river boot", "river boot", 3], ["kennet", "kennet", 3], ["windermere", "windermere", 3], ["canyon", "canyon", 3], ["eskimo", "eskimo", 3], ["burford", "burford", 3],
+              ["skyline", "skyline", 3], ["river grain", "river grain", 3], ["burford", "burford", 3], ["abbey", "abbey", 3], ["eskdale", "eskdale", 3], ["polo boot", "polo boot", 3], ["kensington", "kensington", 3], ["vermont", "vermont", 3], ["chelsea", "chelsea", 3], ["gradmere", "gradmere", 3], ["contour", "contour", 2], ["ketley", "ketley", 3], ["aurora", "aurora", 3], ["heritage", "heritage", 2], ["galway", "galway", 4], ["belford", "belford", 3], ["regina", "regina", 3], ["berwick", "berwick", 3], ["riding boot", "riding boot", 3], ["coniston", "coniston", 4], ["moretta", "moretta", 3], ["waterproof", "waterproof", 1], ["skyline", "skyline", 3], ["terrain", "terrain", 3], ["telluride", "telluride", 3], ["wexford", "wexford", 3], ["wythburn", "wythburn", 3], ["bromont", "bromont", 3], ["pinnacle", "pinnacle", 3]],
+              "poloboot_accessories": [["boot care kit", "boot care kit", 3], ["boot stretcher", "boot stretcher", 4], ["konig boot cream", "konig boot cream", 4], ["boot shape holder", "boot shape holder", 4], ["boot scraper", "boot scraper", 4], ["bootshaper", "bootshaper", 4], ["boot sock", "boot sock", 4], ["boot shaper", "boot shaper", 4], ["interchangeable boot top", "interchangeable boot top", 4], ["boot replacement closure", "boot replacement closure", 4],
+              ["qhp exchangeable top", "qhp exchangeable top", 5], ["strap sleeve", "strap sleeve", 4], ["led boot safety heel clip", "led boot safety heel clip", 4], ["boot pull", "boot pull", 3], ["boot jack", "boot jack", 3], ["boot mat", "boot mat", 3], ["boot tassels", "boot tassels", 3], ["boot pulls", "boot pulls", 3], ["laces", "laces", 3], ["tree", "tree", 3], ["polish", "polish", 3], ["spray", "spray", 1], ["boot clip", "boot clip", 3], ["liner", "liner", 3], ["boot tab", "boot tab", 4],
+              ["buckle pins", "buckle pins", 3], ["replacement cable", "replacement cable", 4], ["jack", "jack", 2]],
+              "ball": [["arena", "arena", 3], ["grass", "grass", 3], ["snow", "snow", 3]],
+              "girth": [["sleeve", "sleeve", 4], ["guard", "guard", 3], ["extension", "extension", 3], ["cover", "cover", 3], ["stud", "stud", 3], ["long", "long", 2], ["short", "short", 2], ["dressage", "dressage", 4], ["sheepskin", "sheepskin", 3], ["overgirth", "overgirth", 3], ["surcingle", "surcingle", 4]],
+              "glove": [["shooting glove", "shooting glove", 3], ["yard glove", "yard glove", 3], ["technical gloves", "technical gloves", 2], ["team roper", "team roper", 4], ["all weather", "all weather", 3], ["carbon pro", "carbon pro", 4], ["speed", "speed", 3], ["pro tech", "pro tech", 4], ["franklin pro classic", "franklin pro classic", 4]],
+              "bridle": [["martingale stops", "martingale stops", 4], ["brow band", "brow band", 3], ["breastplate cover", "breastplate cover", 4], ["nose band", "nose band", 3], ["reins", "reins", 2], ["martingale", "martingale", 3], ["drop noseband", "drop noseband", 3], ["cheek pieces", "cheek pieces", 3], ["noseband", "noseband", 2], ["breastplate", "breastplate", 3], ["running reins", "running reins", 3], ["bridle", "bridle", 3], ["split reins", "split reins", 3], ["rein stop", "rein stop", 3],
+              ["curb chain", "curb chain", 3], ["lead rein", "lead rein", 3], ["browband", "browband", 3]],
+              "bit": [["gag", "gag", 1], ["waterford", "waterford", 4], ["barry gag", "barry gag", 3], ["snaffle", "snaffle", 2], ["balding", "balding", 3], ["pelham", "pelham", 5], ["bomber", "bomber", 2], ["eggbut", "eggbut", 4], ["d-ring", "d-ring", 4], ["happy tongue", "happy tongue", 3], ["t bar", "t bar", 3], ["bit guard", "bit guard", 3], ["golf label", "golf label", 3]],
+              "clothes": [["waterproof", "waterproof", 3]],
+              "whip": [["lunging", "lunging", 4], ["dressage", "dressage", 3], ["schooling", "schooling", 3], ["polo", "polo", 3], ["event bat", "event bat", 3], ["jumping", "jumping", 3]],
+              "helmet": [["shadowmatt", "shadowmatt", 5], ["ayr8", "ayr8", 8], ["palermo", "palermo", 4], ["young rider", "young rider", 4], ["palermo ii", "palermo ii", 7], ["instinct", "instinct", 1], ["skull", "skull", 1], ["samshield", "samshield", 4], ["kep cromo", "kep cromo", 4], ["kask star", "kask star", 3], ["ventair", "ventair", 3], ["vent-air", "vent-air", 3], ["salavita", "salavita", 4]],
+              "helmet_accessories": [["band", "band", 6], ["helmet lining insert", "helmet lining insert", 5], ["ear warmers", "ear warmers", 4], ["replacement liner", "replacement liner", 5], ["helmet rack", "helmet rack", 5], ["cosy helmet hat", "cosy helmet hat", 5], ["helmet deodoriser", "helmet deodoriser", 5], ["cleaner", "cleaner", 5], ["removable lining", "removable lining", 5], ["helmet lamp", "helmet lamp", 5], ["helmet light", "helmet light", 5], ["helmet cover", "helmet cover", 5],
+              ["hat cover", "hat cover", 5], ["skull cover""skull cover", 5], ["helmet rack", "helmet rack", 4], ["head band", "head band", 6], ["headband", "headband", 6], ["sweatband", "sweatband", 6], ["liner", "liner", 6], ["peak", "peak", 3], ["face guard", "face guard", 3], ["faceguard", "faceguard", 3]],
               "saddle": [],
-              "saddle_accessories":[["saddle rack", 3], ["cream", 3], ["saddle soap", 3], ["saddle cover", 3], ["conditioning soap", 3], ["leathercare", 3], ["cleaner", 2], ["soap", 2], ["saddle stand", 3], ["number holder", 3], ["sticky seat", 3]],
-              "glasses": [["prizm", 4], ["jawbreaker", 4], ["path", 4], ["m2", 4], ["radar", 4]],
+              "saddle_accessories":[["saddle rack", "saddle rack", 3], ["cream", "cream", 3], ["saddle soap", "saddle soap", 3], ["saddle cover", "saddle cover", 3], ["conditioning soap", "conditioning soap", 3], ["leathercare", "leathercare", 3], ["cleaner", "cleaner", 2], ["soap", "soap", 2], ["saddle stand", "saddle stand", 3], ["number holder", "number holder", 3], ["sticky seat", "sticky seat", 3]],
+              "glasses": [["prizm", "prizm", 4], ["jawbreaker", "jawbreaker", 4], ["path", "path", 4], ["m2", "m2", 4], ["radar", "radar", 4]],
               "chaps": [],
-              "headcollar": [["lead", 3], ["rawhide", 4], ["headcollar", 3], ["head collar", 3]],
-              "mallet": [["foot maallet", 3], ["foot stick", 3], ["foot mallet", 3]],
-              "trousers_accessories": [["clip", 4]],
-              "trousers": [["hi-rise", 3], ["polo", 4], ["jodhpur", 2], ["underbreeches", 3], ["tights", 2], ["breeches", 3], ["whites", 3], ["jeans", 3]],
+              "headcollar": [["lead", "lead", 3], ["rawhide", "rawhide", 4], ["headcollar", "headcollar", 3], ["head collar", "head collar", 3]],
+              "mallet": [["foot mallet", "foot maallet", 3], ["foot stick", "foot stick", 3], ["foot mallet", "foot mallet", 3]],
+              "trousers_accessories": [["clip", "clip", 4]],
+              "trousers": [["hi-rise", "hi-rise", 3], ["polo", "polo", 4], ["jodhpur", "jodhpur", 2], ["underbreeches", "underbreeches", 3], ["tights", "tights", 2], ["breeches", "breeches", 3], ["whites", "whites", 3], ["jeans", "jeans", 3]],
               "socks": [],
-              "bandages": [["tape", 3], ["tail bandage", 4], ["vet flex", 3], ["orthopaedic", 3], ["sportwrap", 3], ["cohesive", 4], ["body bandage", 3], ["bandage pad", 3], ["liner", 3], ["polo", 4]],
-              "spurs": [["spur strap", 3], ["spur protector", 3], ["dressage spur", 4], ["interchangeable", 4], ["star", 4], ["disk", 4], ["plastic",2], ["dummy spur",3], ["ball end", 4], ["prince of wales", 4], ["ball", 4]],
-              "grooming_kit": [["mane comb", 2], ["groom comb", 3], ["grooming set", 3], ["solocomb", 3], ["scrubbing", 1], ["heritage", 1], ["Water brush", 3], ["bucket brush", 3], ["body brush", 3], ["detangler", 2], ["pulling comb", 3], ["plastic comb", 2], ["grooming kit", 3], ["grooming bag", 3], ["tack box", 3], ["grooming box", 3], ["curry comb", 3], ["tournament bag", 3], ["grooming block", 3], ["tail brush", 3], ["burcket brush", 3], ["microfibre", 3], ["face brush", 3], ["grooming mitt", 3], ["massage glove", 3], ["massaging glove", 3], ["cleaning glove", 3], ["glove towel", 3], ["glove drying towel", 3], ["glove grooming mitt", 3], ["pet grooming glove", 3], ["vinyl glove", 3], ["hoof brush", 3], ["dandy brush", 3], ["razors", 3], ["Detangler brush", 3], ["sweat scraper", 3]],
-              "kneepad": [["kneepad", 1], ["knee pad", 1]],
-              "kneepad_accessories":[["velcro strap", 3], ["velcro strap", 3], ["replacement", 3], ["kneepad straps", 3]],
-              "limb_supports": [["elbow", 3], ["knee", 3], ["ankle", 3], ["wrist", 3], ["back", 2]],
-              "studs":[["tap", 3], ["stud", 1], ["brush", 3], ["stud holes", 3], ["stud spanner", 3]],
+              "bandages": [["tape", "tape", 3], ["tail bandage", "tail bandage", 4], ["vet flex", "vet flex", 3], ["orthopaedic", "orthopaedic", 3], ["sportwrap", "sportwrap", 3], ["cohesive", "cohesive", 4], ["body bandage", "body bandage", 3], ["bandage pad", "bandage pad", 3], ["liner", "liner", 3], ["polo", "polo", 4]],
+              "spurs": [["spur strap", "spur strap", 3], ["spur protector", "spur protector", 3], ["dressage spur", "dressage spur", 4], ["interchangeable", "interchangeable", 4], ["star", "star", 4], ["disk", "disk", 4], ["plastic", "plastic", 2], ["dummy spur", "dummy spur", 3], ["ball end", "ball end", 4], ["prince of wales", "prince of wales", 4], ["ball", "ball", 4]],
+              "grooming_kit": [["mane comb", "mane comb", 2], ["groom comb", "groom comb", 3], ["grooming set", "grooming set", 3], ["solocomb", "solocomb", 3], ["scrubbing", "scrubbing", 1], ["heritage", "heritage", 1], ["Water brush", "Water brush", 3], ["bucket brush", "bucket brush", 3], ["body brush", "body brush", 3], ["detangler", "detangler", 2], ["pulling comb", "pulling comb", 3], ["plastic comb", "plastic comb", 2], ["grooming kit", "grooming kit", 3], ["grooming bag", "grooming bag", 3],
+              ["tack box", "tack box", 3], ["grooming box", "grooming box", 3], ["curry comb", "curry comb", 3], ["tournament bag", "tournament bag", 3], ["grooming block", "grooming block", 3], ["tail brush", "tail brush", 3], ["burcket brush", "burcket brush", 3], ["microfibre", "microfibre", 3], ["face brush", "face brush", 3], ["grooming mitt", "grooming mitt", 3], ["massage glove", "massage glove", 3], ["massaging glove", "massaging glove", 3], ["cleaning glove", "cleaning glove", 3],
+              ["glove towel", "glove towel", 3], ["glove drying towel", "glove drying towel", 3], ["glove grooming mitt", "glove grooming mitt", 3], ["pet grooming glove", "pet grooming glove", 3], ["vinyl glove", "vinyl glove", 3], ["hoof brush", "hoof brush", 3], ["dandy brush", "dandy brush", 3], ["razors", "razors", 3], ["Detangler brush", "Detangler brush", 3], ["sweat scraper", "sweat scraper", 3]],
+              "kneepad": [["kneepad", "kneepad", 1], ["knee pad", "knee pad", 1]],
+              "kneepad_accessories":[["velcro strap", "velcro strap", 3], ["velcro strap", "velcro strap", 3], ["replacement", "replacement", 3], ["kneepad straps", "kneepad straps", 3]],
+              "limb_supports": [["elbow", "elbow", 3], ["knee", "knee", 3], ["ankle", "ankle", 3], ["wrist", "wrist", 3], ["back", "back", 2]],
+              "studs":[["tap", "tap", 3], ["stud", "stud", 1], ["brush", "brush", 3], ["stud holes", "stud holes", 3], ["stud spanner", "stud spanner", 3]],
               "hoof_oil":[],
-              "rug":[["turnout", 3], ["comfitec", 1], ["fly", 4], ["fleece", 4], ["dry rug", 4], ["cooler", 4], ["bug rug", 4], ["rug rack", 5], ["green-tec", 3], ["show rug", 3], ["stable rug", 3], ["lightweight", 3], ["100g", 3], ["50g", 2], ["150g", 3], ["200g", 3], ["220g", 3], ["250g", 3], ["300g", 3], ["350g", 3], ["360g", 3], ["400g", 3], ["450g", 3], ["therapy", 3], ["neck", 3]],
-              "tools": [["broom", 2], ["rake", 2], ["tidee", 3], ["fork", 2], ["shovel", 2], ["fork head", 3], ["broom head", 3], ["broom handle", 3], ["manure", 3], ["ragwort", 4], ["weeda fork", 4]],
-              "plaiting":[["comb", 4], ["band", 3], ["thread", 2]],
-              "ball": [["horse playball", 3], ["snak-a-ball", 4], ["hay", 3], ["wash ball", 3], ["feeder", 3], ["treat ball", 3], ["hangin' ball", 4], ["equine play ball", 4], ["carrot", 3]],
-			  "stirrup_accessories": [["flex-on green", 3], ["flex-on safe", 3]],
-			  "yardboot": [["winter boot, 3"]],
-			  "clothes_winter": [["winter", 3], ["thermal", 2]],
-			  "helmet_yard": [["boom microphone", 4], ["forest classic helmet", 4], ["3m peltor x3", 5], ["husqvarna", 5], ["arborist", 5], ["arbortec", 5]],
-              "helmet_other": [["welding", 4], ["climbing technology", 5], ["x-arbor helmet", 5]],
-              "helmet_custom": [["design your own", 4]],
+              "rug":[["turnout", "turnout", 3], ["comfitec", "comfitec", 1], ["fly", "fly", 4], ["fleece", "fleece", 4], ["dry rug", "dry rug", 4], ["cooler", "cooler", 4], ["bug rug", "bug rug", 4], ["rug rack", "rug rack", 5], ["green-tec", "green-tec", 3], ["show rug", "show rug", 3], ["stable rug", "stable rug", 3], ["lightweight", "lightweight", 3], ["100g", "100g", 3], ["50g", "50g", 2], ["150g", "150g", 3], ["200g", "200g", 3], ["220g", "220g", 3], ["250g", "250g", 3], ["300g", "300g", 3],
+              ["350g", "350g", 3], ["360g", "360g", 3], ["400g", "400g", 3], ["450g", "450g", 3], ["therapy", "therapy", 3], ["neck", "neck", 3]],
+              "tools": [["broom", "broom", 2], ["rake", "rake", 2], ["tidee", "tidee", 3], ["fork", "fork", 2], ["shovel", "shovel", 2], ["fork head", "fork head", 3], ["broom head", "broom head", 3], ["broom handle", "broom handle", 3], ["manure", "manure", 3], ["ragwort", "ragwort", 4], ["weeda fork", "weeda fork", 4]],
+              "plaiting":[["comb", "comb", 4], ["band", "band", 3], ["thread", "thread", 2]],
+              "ball": [["horse playball", "horse playball", 3], ["snak-a-ball", "snak-a-ball", 4], ["hay", "hay", 3], ["wash ball", "wash ball", 3], ["feeder", "feeder", 3], ["treat ball", "treat ball", 3], ["hangin' ball", "hangin' ball", 4], ["equine play ball", "equine play ball", 4], ["carrot", "carrot", 3]],
+			  "stirrup_accessories": [["flex-on green", "flex-on green", 3], ["flex-on safe", "flex-on safe", 3]],
+			  "yardboot": [["winter boot", "winter boot", 3]],
+			  "clothes_winter": [["winter", "winter", 3], ["thermal", "thermal", 2]],
+			  "helmet_yard": [["boom microphone", "boom microphone", 4], ["forest classic helmet", "forest classic helmet", 4], ["3m peltor x3", "3m peltor x3", 5], ["husqvarna", "husqvarna", 5], ["arborist", "arborist", 5], ["arbortec", "arbortec", 5]],
+              "helmet_other": [["welding", "welding", 4], ["climbing technology", "climbing technology", 5], ["x-arbor helmet", "x-arbor helmet", 5]],
+              "helmet_custom": [["design your own", "design your own", 4]],
 
 			  }
 
-gend = [["men", " man", 3], ["men", " men", 3], ["men", " male", 3], ["women", "woman", 3], ["women", "women", 3], ["women", "female", 3], ["women", "ladies", 3], ["women", "lady", 3], ["child", "child", 4], ["child", "kid", 4], ["child", "junior", 4], ["child","baby", 4]]
+gend = [["men", " man", 3], ["men", " men", 3], ["men", " male", 3], ["women", "woman", 3], ["women", "women", 3], ["women", "female", 3], ["women", "ladies", 3], ["women", "lady", 3], ["child", "child", 4], ["child", "kid", 4], ["child", "junior", 4], ["child", "baby", 4]]
 
 
 colour_list = {
@@ -195,7 +206,7 @@ colour_list = {
             "Red": ["red", "red fudge", "scarlet", "wine", "burgundy", "coral"],
             "Pink": ["pink", "reg geranium", "magenta", "blossom", "raspberry", "berry", "rose"],
             "Purple": ["purple", "aubergine", "oxblood", "fig", "grape", "lilac", "plum"],
-            "Blue": ["blue", "arctic print", "indigo", "denim", "navy","ocean"],
+            "Blue": ["blue", "arctic print", "indigo", "denim", "navy", "ocean"],
             "Light Blue": ["cyan", "light blue", "lagoon", "tropical", "teal", "sky", "turquoise", "aqua"],
             "Light Green": ["pistachio", "mint"],
             "Green": ["green", "dark green", "olive", "jade"],
@@ -276,9 +287,9 @@ def productname(product, cat):
     acc_m = 0
 
     for i in prodtype[cat]:
-        if i[0] in product:
+        if i[1] in product:
             name.append(i[0])
-            weight.append(i[1])
+            weight.append(i[2])
 
     #print("passed 2")
     try:
@@ -326,9 +337,9 @@ def productacc(product, cat):
 
     try:
         for i in prodtype[(cat + "_accessories")]:
-            if i[0] in product:
+            if i[1] in product:
                 name.append(i[0])
-                weight.append(i[1])
+                weight.append(i[2])
     except:
         pass
         #print("no accessory list")
@@ -487,10 +498,10 @@ def change_cat(categ, add):
 
 
 
-word = "Weatherbeeta Kool Coat in Blue navy orange"
+word = "Weatherbeeta Kool Coat in Blue navy orange turnout"
 result = gettype(word)
 #print("brand = " + result[0])
-#print("category = " + result[1])
-#print("product type = " + result[2])
+print("category = " + result[1])
+print("product type = " + result[2])
 #print("gender = " + result[3])
 print("colour = " + result[4])
