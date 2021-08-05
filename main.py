@@ -98,7 +98,13 @@ sites = ["naylors",
         "paw_heads",
         "nes_animal_health",
         "equi_supermarket",
-        "murray_horse_care"
+        "murray_horse_care",
+        "polo_splice",
+        "porto_polo",
+        "rj_polo",
+        "roxtons",
+        "satsfaction",
+        "tally_ho_farm"
         ]
 
 js_sites = ["millbry_hill",

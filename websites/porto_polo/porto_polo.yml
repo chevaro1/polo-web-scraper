@@ -1,0 +1,22 @@
+product:
+    css: div.product
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: 'div.prodname a.ectlink'
+            xpath: null
+            type: Text
+        price:
+            css: div.prodprice
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image

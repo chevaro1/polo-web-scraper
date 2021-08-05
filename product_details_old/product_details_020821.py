@@ -124,7 +124,7 @@ categories = {"bag": [["luggage", 4], ["whip bag", 4], ["jacket bag", 4], ["tail
 
 
 
-brands = [["stierna", 5], ["thermatex", 5], ["leoveties", 5], ["covalliero", 5], ["kruuse", 5], ["pet stuff", 5], ["earlswood", 5], ["red gorilla", 5], ["hillbrush", 5], ["big tidee", 5], ["caldwells", 5], ["km elite", 5], ["wilkinson sword", 5], ["eazitools", 5], ["equine essentials", 5], ["harold moore", 5], ["herbie", 5], ["gorilla riddler", 5], ["future fork", 5], ["evysor", 5], ["wrendale", 5], ["stericlens", 5], ["nettex", 5], ["net-tex", 5], ["husqvarna", 5], ["petrie", 5], ["horsemens pride", 5], ["ice gorilla", 5], ["fairfax & favor", 5], ["icehorse", 5], ["casablanca", 5], ["ona", 1], ["charles owen", 5], ["armis", 5], ["instinct", 4], ["salvavita", 5], ["lascano", 5],
+brands = [["whiskas", 5], ["felix", 5], ["sealey", 5], ["beaphar", 5], ["stierna", 5], ["thermatex", 5], ["leoveties", 5], ["covalliero", 5], ["kruuse", 5], ["pet stuff", 5], ["earlswood", 5], ["red gorilla", 5], ["hillbrush", 5], ["big tidee", 5], ["caldwells", 5], ["km elite", 5], ["wilkinson sword", 5], ["eazitools", 5], ["equine essentials", 5], ["harold moore", 5], ["herbie", 5], ["gorilla riddler", 5], ["future fork", 5], ["evysor", 5], ["wrendale", 5], ["stericlens", 5], ["nettex", 5], ["net-tex", 5], ["husqvarna", 5], ["petrie", 5], ["horsemens pride", 5], ["ice gorilla", 5], ["fairfax & favor", 5], ["icehorse", 5], ["casablanca", 5], ["ona", 1], ["charles owen", 5], ["armis", 5], ["instinct", 4], ["salvavita", 5], ["lascano", 5],
          ["pampeano", 5], ["ainsley", 5], ["ssg", 5], ["professionals choice", 2], ["krono", 5], ["sabona", 5],
          ["berkeley", 5], ["edition", 1], ["tally ho farm", 5], ["oakley", 5], ["rj polo", 1], ["stephens", 2],
          ["sats polo", 1], ["arma", 2], ["eskadron", 5], ["le mieux", 5], ["sabona", 4], ["kneeland", 3], ["vac", 1],
@@ -134,15 +134,15 @@ brands = [["stierna", 5], ["thermatex", 5], ["leoveties", 5], ["covalliero", 5],
          ["mountain horse", 3], ["fairfax & favor", 4], ["tattini", 3], ["veredus", 4], ["aigle", 3], ["neue schule", 3], ["joules", 3],
          ["fyna lite", 3], ["fyna-lite", 3], ["fynalite", 3], ["tubtrug", 4], ["schokemohle", 3], ["kavalkade", 3], ["zandona", 3],
          ["fairfax", 3], ["mark todd", 3], ["prolite", 3], ["kiefer", 3], ["hyshine", 3], ["rhinegold", 3], ["rodney powell", 3],
-         ["harry hall", 3], ["horze", 2], ["champion", 1], ["karben", 4], ["airowear", 3], ["gatehouse", 3],
+         ["harry hall", 3], ["horze", 2], ["champion", 1], ["karben", 4], ["gatehouse", 3], ["airowear", 3], ["gatehouse", 3],
          ["racesafe", 2], ["dunlop", 3], ["border wellies", 2], ["hunter", 2], ["barbour", 3], ["rockfish", 2], ["Le Chameau", 3],
          ["lincon", 3], ["roma", 3], ["Equilibrium", 2], ["gorilla", 1], ["hy ",1], ["stubbs", 3], ["hippotonic", 4], ["eper-on", 3],
-         ["sprenger", 3], ["stubben", 3], ["korsteel", 3], ["jhl", 2], ["horseware", 3], ["tuffa", 2], ["hyland", 2],
+         ["sprenger", 3], ["stubben", 3], ["korsteel", 3], ["jhl", 2], ["horseware", 3], ["rhinegold", 3], ["tuffa", 2], ["hyland", 2],
          ["saxon", 3], ["elico", 3], ["moretta", 3], ["toggi", 3], ["premier equine", 2], ["tredstep", 3], ["tonics", 2],
          ["holland cooper", 3], ["ps of sweden", 4], ["little knight", 2], ["little rider", 2], ["hyspeed", 3], ["derby house", 2],
          ["hywither", 3], ["john whitaker", 4], ["imperial riding", 3], ["bucas", 3], ["hkm", 1], ["kingsland", 3], ["schockemöhle", 4],
          ["christ ", 1], ["ezi-groom", 3], ["eqckusive", 3], ["bridleway", 3], ["hilton herbs", 3], ["horslyx", 4], ["vetwrap", 3],
-         ["bitz", 4], ["usg", 2], ["busse", 3]]
+         ["bitz", 4]]
 
 
 prodtype = {"bag": [["boot carrier", "boot carrier", 4], ["boot bag", "boot bag", 4], ["cooling", "cooling", 4], ["duffle bag", "duffle bag", 4], ["holdall", "holdall", 4], ["hold all", "hold all", 4], ["weekend", "weekend", 4], ["bum bag", "bum bag", 4], ["stable bag", "stable bag", 4], ["garment bag", "garment bag", 4], ["ring bag", "ring bag", 4], ["hat bag", "hat bag", 4], ["helmet bag", "helmet bag", 4], ["mallet bag", "mallet bag", 4], ["saddle bag", "saddle bag", 4],
@@ -164,8 +164,8 @@ prodtype = {"bag": [["boot carrier", "boot carrier", 4], ["boot bag", "boot bag"
               "helmet": [["shadowmatt", "shadowmatt", 5], ["ayr8", "ayr8", 8], ["palermo", "palermo", 4], ["young rider", "young rider", 4], ["palermo ii", "palermo ii", 7], ["instinct", "instinct", 1], ["skull", "skull", 1], ["samshield", "samshield", 4], ["kep cromo", "kep cromo", 4], ["kask star", "kask star", 3], ["ventair", "ventair", 3], ["vent-air", "vent-air", 3], ["salavita", "salavita", 4]],
               "helmet_accessories": [["band", "band", 6], ["helmet lining insert", "helmet lining insert", 5], ["ear warmers", "ear warmers", 4], ["replacement liner", "replacement liner", 5], ["helmet rack", "helmet rack", 5], ["cosy helmet hat", "cosy helmet hat", 5], ["helmet deodoriser", "helmet deodoriser", 5], ["cleaner", "cleaner", 5], ["removable lining", "removable lining", 5], ["helmet lamp", "helmet lamp", 5], ["helmet light", "helmet light", 5], ["helmet cover", "helmet cover", 5],
               ["hat cover", "hat cover", 5], ["skull cover""skull cover", 5], ["helmet rack", "helmet rack", 4], ["head band", "head band", 6], ["headband", "headband", 6], ["sweatband", "sweatband", 6], ["liner", "liner", 6], ["peak", "peak", 3], ["face guard", "face guard", 3], ["faceguard", "faceguard", 3]],
-              "saddle": [],
-              "saddle_accessories":[["saddle rack", "saddle rack", 3], ["cream", "cream", 3], ["saddle soap", "saddle soap", 3], ["saddle cover", "saddle cover", 3], ["conditioning soap", "conditioning soap", 3], ["leathercare", "leathercare", 3], ["cleaner", "cleaner", 2], ["soap", "soap", 2], ["saddle stand", "saddle stand", 3], ["number holder", "number holder", 3], ["sticky seat", "sticky seat", 3]],
+              "saddle": [["saddle rack", "saddle rack", 3]],
+              "leather_care":[["cream", "cream", 3], ["saddle soap", "saddle soap", 3], ["saddle cover", "saddle cover", 3], ["conditioning soap", "conditioning soap", 3], ["leathercare", "leathercare", 3], ["cleaner", "cleaner", 2], ["soap", "soap", 2], ["saddle stand", "saddle stand", 3], ["number holder", "number holder", 3], ["sticky seat", "sticky seat", 3]],
               "glasses": [["prizm", "prizm", 4], ["jawbreaker", "jawbreaker", 4], ["path", "path", 4], ["m2", "m2", 4], ["radar", "radar", 4]],
               "chaps": [],
               "headcollar": [["lead rope", "lead", 3], ["rawhide headcollar", "rawhide", 4], ["foal headcollar", "foal", 3], ["leather headcollar", "leather", 3]],
@@ -192,7 +192,7 @@ prodtype = {"bag": [["boot carrier", "boot carrier", 4], ["boot bag", "boot bag"
 			  "helmet_yard": [["boom microphone", "boom microphone", 4], ["forest classic helmet", "forest classic helmet", 4], ["3m peltor x3", "3m peltor x3", 5], ["husqvarna", "husqvarna", 5], ["arborist", "arborist", 5], ["arbortec", "arbortec", 5]],
               "helmet_other": [["welding", "welding", 4], ["climbing technology", "climbing technology", 5], ["x-arbor helmet", "x-arbor helmet", 5]],
               "helmet_custom": [["design your own", "design your own", 4]],
-              "body_protector": [["Eco Flexi Panel", "eco-flexi", 3], ["Eco Flexi Panel", "eco flexi", 3], ["Airowear wave", "airowear wave", 3], ["Airowear ayrps", "airowear ayrps", 3], ["Racesafe Provent", "provent", 3], ["Airowear outlyne", "outlyne", 3], ["Titanium TI22", "TI22", 4], ["Superflex Sport", "superflex", 3], ["Flexair", "flexair", 3], ["shires Karben", "karben", 4], ["Airowear Flexion", "flexion", 3], ["Airowear Airmesh", "airmesh", 3]]
+
 			  }
 
 gend = [["men", " man", 3], ["men", " men", 3], ["men", " male", 3], ["women", "woman", 3], ["women", "women", 3], ["women", "female", 3], ["women", "ladies", 3], ["women", "lady", 3], ["child", "child", 4], ["child", "kid", 4], ["child", "junior", 4], ["child", "baby", 4]]

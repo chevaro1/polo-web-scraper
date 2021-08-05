@@ -24,3 +24,8 @@ function make_table() {
 w.document.write(table);
 }
 make_table()
+
+
+
+maybe useful future links:
+https://gist.github.com/niccokunzmann/6038331 : when threads are hanging, this will tell you where

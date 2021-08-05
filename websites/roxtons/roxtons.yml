@@ -1,0 +1,22 @@
+product:
+    css: 'ul.productgrid--items article.productitem'
+    xpath: null
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: h2.productitem--title
+            xpath: null
+            type: Text
+        price:
+            css: 'div.productitem--info div.price--main span.money'
+            xpath: null
+            type: Text
+        product_link:
+            css: a
+            xpath: null
+            type: Link
+        image:
+            css: img
+            xpath: null
+            type: Image
